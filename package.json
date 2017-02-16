@@ -22,6 +22,7 @@
     "gulp-postcss": "6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.4.1",
+    "gulp-svgmin": "^1.2.3",
     "lint-staged": "^3.3.0",
     "postcss-cssnext": "^2.9.0",
     "pre-commit": "^1.2.2",
@@ -32,7 +33,10 @@
   "scripts": {
     "eslint": "eslint *.js",
     "stylelint": "stylelint *.css",
-    "pre-commit": ["eslint", "stylelint"],
+    "pre-commit": [
+      "eslint",
+      "stylelint"
+    ],
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
