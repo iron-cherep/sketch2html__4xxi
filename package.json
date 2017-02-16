@@ -1,0 +1,51 @@
+{
+  "name": "4xxi-project",
+  "version": "0.1.0",
+  "description": "test assignment for 4xxi",
+  "author": "iron-cherep",
+  "private": true,
+  "browsers": {
+    "browserlist": [
+      "last 2 versions"
+    ]
+  },
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "0.1.x",
+    "autoprefixer": "6.5.3",
+    "browser-sync": "2.18.2",
+    "del": "^2.2.2",
+    "eslint": "^3.15.0",
+    "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "lint-staged": "^3.3.0",
+    "postcss-cssnext": "^2.9.0",
+    "pre-commit": "^1.2.2",
+    "precss": "^1.4.0",
+    "run-sequence": "^1.2.2",
+    "stylelint": "^7.8.0"
+  },
+  "scripts": {
+    "eslint": "eslint *.js",
+    "stylelint": "stylelint *.css",
+    "pre-commit": ["eslint", "stylelint"],
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "*.php",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.{less}"
+  ],
+  "engines": {
+    "node": "6.7"
+  }
+}
