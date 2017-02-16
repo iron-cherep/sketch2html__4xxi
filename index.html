@@ -17,68 +17,206 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+
+    <aside class="popup  popup--app">
+      <img class="popup__logo" src="img/app-icon@3x.png" alt="app-logo">
+      <p class="popup__header">Centrallo
+        <span class="popup__description">Free on the Google Play</span>
+      </p>
+      <button class="button  button--download">Download</button>
+      <button class="popup__button  popup__button--close">
+        <img src="img/svg/close.svg" alt="close" class="popup__button-image">
+      </button>
+    </aside>
+
+    <header class="page-header">
+
+      <div class="page-header__account-status">
+        <h1 class="page-header__main-header">
+          <img src="img/logo@3x.png" class="page-header__logo">
+          Centrallo
+        </h1>
+        <a href="#" class="page-header__link  page-header__link--signup">Sign up
+          <span class="page-header__addition">for free</span>
+        </a>
+        <span class="page-header__offer">Start publishing in minutes</span>
+        <a href="#" class="page-header__link  page-header__link--login">Log in</a>
+      </div>
+
+      <h3 class="page-header__user">
+        <img src="img/ava@3x.png" alt="avatar" class="page-header__avatar">
+        Konstantin Vladimirskiy
+      </h3>
+
+      <ul class="page-header__social">
+        <li class="page-header__social-item  page-header__social-item--toggle">
+          <button class="button  page-header__social-toggle">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4.973 7.87a2.52 2.52 0 0 0 .015-.616l6.875-2.864a2.5 2.5 0 1 0-.862-1.806l-7 2.916a2.5 2.5 0 1 0-.097 4.069l7.123 3.562a2.5 2.5 0 1 0 1.07-1.7L4.972 7.869z" fill="#00AEFF" fill-rule="evenodd"/></svg>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+        </li>
+        <li class="page-header__social-item">
+          <span class="page-header__social-link">http://cll.io/a6lnu</span>
+        </li>
+        <li class="page-header__social-item">
+          <button class="page-header__social-button">
+            <svg width="8" height="16" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.32 16H1.773V7.999H0V5.242h1.773V3.587c0-2.249 1-3.587 3.844-3.587h2.367v2.758h-1.48c-1.107 0-1.18.385-1.18 1.104l-.005 1.38H8L7.686 8H5.32v8z" fill="#FFF" fill-rule="evenodd"/></svg>
+          </button>
+        </li>
+        <li class="page-header__social-item">
+          <button class="page-header__social-button">
+            <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M14.115 2.055A3.282 3.282 0 0 0 15.558.24a6.57 6.57 0 0 1-2.085.797 3.281 3.281 0 0 0-5.677 2.245c0 .257.027.507.083.747A9.319 9.319 0 0 1 1.114.6 3.283 3.283 0 0 0 2.13 4.983a3.295 3.295 0 0 1-1.488-.41v.04A3.281 3.281 0 0 0 3.277 7.83a3.212 3.212 0 0 1-.866.116 3.25 3.25 0 0 1-.617-.058 3.283 3.283 0 0 0 3.066 2.278 6.587 6.587 0 0 1-4.077 1.405c-.265 0-.527-.014-.783-.045A9.298 9.298 0 0 0 5.032 13c6.038 0 9.339-5 9.339-9.337a8.53 8.53 0 0 0-.009-.425A6.647 6.647 0 0 0 16 1.538a6.556 6.556 0 0 1-1.885.517z" fill="#FFF" fill-rule="evenodd"/></svg>
+          </button>
+        </li>
+        <li class="page-header__social-item">
+          <button class="page-header__social-button">
+            <svg width="20" height="11" viewBox="0 0 20 11" xmlns="http://www.w3.org/2000/svg"><path d="M10.98 10.954s.362-.039.547-.23c.169-.175.163-.507.163-.507s-.022-1.545.722-1.773c.734-.225 1.676 1.494 2.675 2.155.755.5 1.329.39 1.329.39l2.671-.035s1.397-.083.735-1.142c-.055-.087-.387-.784-1.986-2.215-1.676-1.499-1.45-1.256.566-3.849 1.23-1.579 1.72-2.542 1.567-2.954-.146-.395-1.05-.29-1.05-.29l-3.007.018s-.223-.03-.388.066c-.162.093-.266.311-.266.311s-.476 1.221-1.11 2.26c-1.34 2.192-1.875 2.308-2.094 2.173-.51-.318-.383-1.275-.383-1.955 0-2.125.335-3.01-.65-3.24-.327-.076-.567-.126-1.404-.135-1.073-.01-1.98.004-2.495.246-.343.162-.607.522-.445.543.198.025.648.117.887.43.308.404.297 1.312.297 1.312s.177 2.5-.413 2.81c-.405.214-.961-.22-2.155-2.21C4.68 2.115 4.22.99 4.22.99S4.13.779 3.97.665a1.259 1.259 0 0 0-.462-.179L.652.504S.222.515.065.696c-.14.159-.01.49-.01.49s2.236 5.046 4.77 7.59c2.323 2.33 4.96 2.178 4.96 2.178h1.196z" fill="#FFF" fill-rule="evenodd"/></svg>
+          </button>
+        </li>
+        <li class="page-header__social-item">
+          <button class="page-header__social-button">
+            <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M.378 4.81h2.924v10.189H.378V4.809zm1.388-1.275h-.022C.686 3.535 0 2.756 0 1.77 0 .764.706 0 1.786 0c1.079 0 1.742.762 1.763 1.767 0 .987-.684 1.768-1.783 1.768zM15 15h-3.315V9.726c0-1.38-.519-2.321-1.66-2.321-.871 0-1.356.635-1.582 1.248-.085.22-.072.526-.072.833V15H5.087s.042-9.341 0-10.19h3.284v1.599c.194-.7 1.244-1.697 2.919-1.697 2.078 0 3.71 1.466 3.71 4.621V15z" fill="#FFF" fill-rule="evenodd"/></svg>
+          </button>
+        </li>
+      </ul>
+
+      <button class="button button--add">Add to my Centrallo</button>
+      <h2 class="page-header__post-header">Post-release checklist 2015.02.26</h2>
+
+    </header>
+    <main class="page-main">
+
+      <article class="note  note--starred">
+        <form class="note__form">
+          <label for="" class="note__checkbox-label">
+            <input type="checkbox" class="note__checkbox">
+            Referral Accepted and Invited invitations not sorted by A-Z
+          </label>
+
+          <label for="" class="note__checkbox-label">
+            <input type="checkbox" class="note__checkbox">
+            Inbox shows me 242 items - that includes Done items; Only show me active
+          </label>
+
+          <label for="" class="note__checkbox-label">
+            <input type="checkbox" class="note__checkbox">
+            Inbox defaults to show done items - it should not
+          </label>
+
+          <label for="" class="note__checkbox-label">
+            <input type="checkbox" class="note__checkbox">
+            Lists default to Show Done - they should not
+          </label>
+
+          <label for="" class="note__checkbox-label">
+            <input type="checkbox" class="note__checkbox">
+            Recent view should sort by Created and show no Done items
+          </label>
+        </form>
+        <footer class="note__footer">
+          <time class="note-time">2h ago</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link</button>
+          <p class="note__share-link">http://cll.io/a6lnu</p>
+        </footer>
+      </article>
+
+      <article class="note">
+        <ul class="note__list  note__list--active">
+          <li class="note__list-info">
+            <span class="note__list-title">Children</span>
+            <span class="note__list-length">12 items</span>
+            <time class="note__list-time">7h ago</time>
+          </li>
+          <li class="note__list-item">Lorem ipsum.</li>
+          <li class="note__list-item">Lorem ipsum.</li>
+        </ul>
+        <ul class="note__list">
+          <li class="note__list-info">
+            <span class="note__list-title">The longest title in the world</span>
+            <span class="note__list-length">3 items</span>
+            <time class="note__list-time">Mar 13</time>
+          </li>
+          <li class="note__list-item">Lorem ipsum.</li>
+          <li class="note__list-item">Lorem ipsum.</li>
+        </ul>
+        <footer class="note__footer">
+          <time class="note-time">2h ago</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link</button>
+        </footer>
+      </article>
+
+      <article class="note">
+        <div class="note__media-content">
+          <div class="note__video-container">
+            <video class="note__video"></video>
+          </div>
+          <img src="img/photo-1@3x.png" alt="photo" class="note__photo">
+          <img src="img/photo-2@3x.png" alt="photo" class="note__photo">
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+        <time class="note__due-on">Due on Feb 13, 12:42 PM</time>
+        <footer class="note__footer">
+          <time class="note-time">Feb 14</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link</button>
+          <p class="note__share-link">http://cll.io/a6lnu</p>
+        </footer>
+      </article>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <article class="note">
+        <p class="note__text">The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.</p>
+        <div class="note__media-content">
+          <img src="img/photo-3@3x.png" alt="photo" class="note__photo">
+          <img src="img/photo-5@3x.png" alt="photo" class="note__photo">
+          <img src="img/photo-6@3x.png" alt="photo" class="note__photo">
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="note__map-section">
+          <div class="note__map" id="g-map"></div>
+          <div class="note__map-info">
+            <h3 class="note__map-header">Merry Bergtraum High School for Business Cariers</h3>
+            <p class="note__map-address">411 Pearl St, NY 10038
+              <span class="note__map-state">United States of America</span>
+              <a href="#" class="note__map-link">Watch location on Google Maps</a>
+            </p>
+          </div>
         </div>
-      </div>
+        <ul class="note__attach-list">
+          <li class="note__attach">
+            <img src="img/svg/attach-db.svg" alt="dropbox" class="note__attach-icon">
+            <span class="note__attach-filename">logo_final.eps</span>
+          </li>
+          <li class="note__attach">
+            <img src="img/svg/attach-skydrive.svg" alt="skydrive" class="note__attach-icon">
+            <span class="note__attach-filename">photos_summer.zip</span>
+          </li>
+          <li class="note__attach">
+            <img src="img/svg/attach-doc.svg" alt="doc" class="note__attach-icon">
+            <span class="note__attach-filename">work_…hard.doc</span>
+          </li>
+        </ul>
+        <footer class="note__footer">
+          <time class="note-time">Jan 12</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link</button>
+          <p class="note__share-link">http://cll.io/a6lnu</p>
+        </footer>
+      </article>
 
-      <hr>
+      <article class="note  note--protected">
+        <footer class="note__footer">
+          <time class="note-time">Nov 22</time>
+        </footer>
+      </article>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
+      <article class="note  note--archived">
+        <footer class="note__footer">
+          <time class="note-time">Nov 21</time>
+        </footer>
+      </article>
 
-        <script src="js/main.js"></script>
+    </main>
+
+      <script src="js/main.js"></script>
 
     </body>
 </html>
