@@ -1,0 +1,27 @@
+.attach {
+  padding-left: 0;
+
+  text-align: left;
+  font-size: 0;
+}
+
+.attach__item {
+  display: inline-block;
+  width: 132px;
+  margin-top: 25px;
+
+  text-align: center;
+}
+.attach__icon {
+  display: inline-block;
+  width: 46px;
+  height: 58px;
+}
+
+.attach__filename {
+  display: inline-block;
+  width: 100%;
+
+  font-size: 14px;
+  color: #333333;
+}

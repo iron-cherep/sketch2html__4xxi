@@ -1,0 +1,92 @@
+/* служебные */
+
+@define-mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@define-mixin visuallyhidden {
+    border: 0;
+    clip-path: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+  нижний разделитель 0.5px
+*/
+@define-mixin bottom-border $color {
+  &::after {
+    position: absolute;
+    bottom: 0; left: 0;
+    transform: scaleY(0.5);
+
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $color;
+
+    content: "";
+  }
+}
+
+/*
+  добавляет отметку в правом верхнем
+  углу заметки в соответствии с её заметки
+*/
+@define-mixin note-status $state {
+  &::before {
+    position: absolute;
+    top: 0; right: 0;
+    transform: translate(34px, -34px) rotate(45deg);
+
+    display: block;
+    width: 68px;
+    height: 68px;
+
+    @if $(state) == starred {
+      background-color: #ef4b2b;
+    }
+    @if $(state) == archived {
+      background-color: #979da3;
+    }
+    @if $(state) == protected {
+      background-color: #3c434a;
+    }
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0; right: 0;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @if $(state) == starred {
+      background-image: url(../img/svg/star.svg);
+      background-size: 16px 15.2px;
+    }
+    @if $(state) == archived {
+      background-image: url(../img/svg/box.svg);
+      background-size: 16px 14px;
+    }
+    @if $(state) == protected {
+      background-image: url(../img/lock.png);
+      background-size: 12px 15px;
+    }
+
+    content: "";
+  }
+}

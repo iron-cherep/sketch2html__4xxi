@@ -1,0 +1,43 @@
+.map {
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 20px;
+
+  @mixin bottom-border #bdbdbd;
+}
+.map__container {
+  width: 100%;
+  height: 55vw;
+
+  background: url(../img/map@3x.png) center no-repeat;
+  background-size: cover;
+}
+.map__header {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.31;
+  color: #383838;
+}
+.map__address {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  color: #858585;
+}
+.map__state {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  color: #858585;
+}
+.map__link {
+  color: #00adff;
+
+  &:link, &:visited {
+    color: #00adff;
+  }
+}

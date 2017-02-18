@@ -1,0 +1,59 @@
+.popup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: white;
+
+  background-color: #37b7ec;
+}
+
+.popup__logo {
+  display: inline-block;
+  margin-right: 7.5px;
+  margin-left: 12.5px;
+  width: 32px;
+  height: 32px;
+
+  vertical-align: middle;
+
+  border-radius: 50%;
+}
+
+.popup__info {
+  margin-top: 10px;
+  margin-bottom: 8.5px;
+
+  vertical-align: middle;
+}
+
+.popup__header {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+}
+
+.popup__description {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.popup__button {
+
+  &--download {
+    margin-right: 11.6px;
+    margin-left: auto;
+  }
+  &--close {
+    margin-right: 7.2px;
+    padding: 5px;
+
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

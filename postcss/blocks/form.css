@@ -1,0 +1,17 @@
+.form {}
+.form__checkbox {
+  position: absolute;
+  top: 0.2em; left: -5px;
+
+}
+.form__checkbox-label {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding-left: 20px;
+
+  line-height: 1.38;
+  color: #494949;
+}

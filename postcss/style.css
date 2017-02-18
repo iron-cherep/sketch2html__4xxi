@@ -1,5 +1,20 @@
-@import "normalize.css";
-
-@import "fonts.css";
-@import "global.css";
 @import "variables.css";
+
+@import "normalize.css";
+@import "fonts.css";
+@import "mixins.css";
+@import "global.css";
+
+@import "blocks/button.css";
+@import "blocks/form.css";
+@import "blocks/list.css";
+@import "blocks/map.css";
+@import "blocks/media.css";
+@import "blocks/attach.css";
+@import "blocks/social.css";
+
+@import "blocks/popup.css";
+@import "blocks/page-header.css";
+@import "blocks/page-main.css";
+@import "blocks/note.css";
+@import "blocks/page-footer.css";

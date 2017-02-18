@@ -77,9 +77,13 @@ gulp.task("images", function() {
 //Оптимизирует SVG-изображения. Не заменяет оригинальных файлов.
 ////
 gulp.task("svgmin", function() {
-  return gulp.src("img/**/*.svg")
+  return gulp.src([
+    "img/**/*.svg"
+  ], {
+    base: "."
+  })
     .pipe(svgmin())
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build"));
 });
 
 ////

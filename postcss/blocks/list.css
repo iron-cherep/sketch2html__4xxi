@@ -1,0 +1,74 @@
+.list {
+  overflow: hidden;
+  margin: 0;
+  padding-left: 28px;
+
+  &--active .list__title::before {
+    background-image: url(../img/svg/list--active.svg);
+    /* устанавливает иконку для активного списка*/
+  }
+}
+
+.list__info {
+  margin-bottom: 5px;
+
+  font-size: 0;
+
+  background: #f7f8f8;
+  cursor: pointer;
+}
+
+.list__items {
+  margin: 0;
+  padding-left: 0;
+}
+
+.list__item {
+  margin-bottom: 5px;
+}
+
+.list__title {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  &--top {
+    margin-top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 2px; left: -28px;
+
+    display: block;
+    width: 16px;
+    height: 14px;
+
+    background: url(../img/svg/list.svg) center no-repeat;
+    background-size: contain;
+
+    content: "";
+  }
+}
+.list__time {
+  display: inline-block;
+  width: 50%;
+
+  text-align: left;
+  font-size: 16px;
+  color: #858585;
+}
+.list__length {
+  display: inline-block;
+  width: 50%;
+
+  text-align: right;
+  font-size: 16px;
+  color: #858585;
+}
