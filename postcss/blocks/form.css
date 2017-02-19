@@ -1,9 +1,46 @@
+
 .form {}
+
 .form__checkbox {
   position: absolute;
   top: 0.2em; left: -5px;
+  outline: none;
 
+  visibility: hidden;
+
+  &:checked + .form__custom-checkbox {
+    border-color: #3b99fc;
+    background-color: #3b99fc;
+
+    &:before {
+      position: absolute;
+      top: 0px; left: 0px;
+
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      border: none;
+      background: url(../img/check.png) center no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
 }
+.form__custom-checkbox {
+  position: absolute;
+  top: 0.2em; left: -5px;
+
+  display: block;
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid #b8b8b8;
+  border-radius: 2px;
+  background-color: transparent;
+  outline: none;
+}
+
 .form__checkbox-label {
   position: relative;
 
