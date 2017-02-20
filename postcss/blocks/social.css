@@ -46,6 +46,7 @@
     top: 6px; left: 35px;
     display: inline-block;
     margin-right: 0.5em;
+    fill: #37b7ec;
   }
 }
 
@@ -57,6 +58,10 @@
 
   background-color: transparent;
   border: none;
+
+  svg {
+    fill: white;
+  }
 }
 
 .social__link {

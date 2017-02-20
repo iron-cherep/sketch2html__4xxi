@@ -30,7 +30,9 @@
       </div>
       <button class="button  app-store__button  app-store__button--download">Download</button>
       <button class="app-store__button  app-store__button--close" id="close-app-popup">
-        <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd"><path d="M.63 11.641L11.818.453M11.818 11.641L.63.453"/></g></svg>
+        <svg role="img" title="close" width="13" height="12">
+          <use xlink:href="img/svg/sprite.svg#close"/>
+        </svg>
      </button>
     </aside>
 
@@ -46,11 +48,6 @@
       <a href="#" class="account-status__link  account-status__link--login">Log in</a>
     </aside>
 
-    <dialog class="popup  popup--social">
-      <h2 class="popup__header"></h2>
-
-    </dialog>
-
     <header class="page-header">
 
       <h3 class="page-header__user">
@@ -64,6 +61,7 @@
             <svg role="img" title="Share" width="16" height="16">
               <use xlink:href="img/svg/sprite.svg#share"/>
             </svg>
+            Share
           </button>
         </li>
         <li class="social__item">
@@ -267,13 +265,52 @@
       </ul>
       <div class="page-footer__social">
         <a href="#" class="page-footer__social-link">
-          <svg width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg"><path d="M14.115 2.055A3.282 3.282 0 0 0 15.558.24a6.57 6.57 0 0 1-2.085.797 3.281 3.281 0 0 0-5.677 2.245c0 .257.027.507.083.747A9.319 9.319 0 0 1 1.114.6 3.283 3.283 0 0 0 2.13 4.983a3.295 3.295 0 0 1-1.488-.41v.04A3.281 3.281 0 0 0 3.277 7.83a3.212 3.212 0 0 1-.866.116 3.25 3.25 0 0 1-.617-.058 3.283 3.283 0 0 0 3.066 2.278 6.587 6.587 0 0 1-4.077 1.405c-.265 0-.527-.014-.783-.045A9.298 9.298 0 0 0 5.032 13c6.038 0 9.339-5 9.339-9.337a8.53 8.53 0 0 0-.009-.425A6.647 6.647 0 0 0 16 1.538a6.556 6.556 0 0 1-1.885.517z" fill="#8c9399" fill-rule="evenodd"/></svg>
+          <svg role="img" title="Twitter" width="16" height="13">
+            <use xlink:href="img/svg/sprite.svg#soc-tw"/>
+          </svg>
         </a>
         <a href="#" class="page-footer__social-link">
-          <svg width="8" height="16" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.32 16H1.773V7.999H0V5.242h1.773V3.587c0-2.249 1-3.587 3.844-3.587h2.367v2.758h-1.48c-1.107 0-1.18.385-1.18 1.104l-.005 1.38H8L7.686 8H5.32v8z" fill="#8c9399" fill-rule="evenodd"/></svg>
+          <svg role="img" title="Facebook" width="8" height="16">
+            <use xlink:href="img/svg/sprite.svg#soc-fb"/>
+          </svg>
         </a>
       </div>
     </footer>
+
+    <aside class="popup  popup--hidden  popup--social" id="social-popup__window">
+      <div class="popup__screen-filter"></div>
+      <div class="popup__modal-wrapper">
+        <h2 class="popup__header">Share</h2>
+        <span class="popup__link">http://cll.io/a6lnu</span>
+
+        <button class="popup__button  popup__button--facebook">
+          <svg role="img" title="Facebook" width="8" height="16">
+            <use xlink:href="img/svg/sprite.svg#soc-fb"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--twitter">
+          <svg role="img" title="Twitter" width="16" height="13">
+            <use xlink:href="img/svg/sprite.svg#soc-tw"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--vk">
+          <svg role="img" title="VK" width="20" height="11">
+            <use xlink:href="img/svg/sprite.svg#soc-vk"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--linkedin">
+          <svg role="img" title="LinkedIn" width="15" height="15">
+            <use xlink:href="img/svg/sprite.svg#soc-in"/>
+          </svg>
+        </button>
+
+        <button class="popup__close" id="social-popup__close">
+          <svg role="img" title="close" width="13" height="12">
+            <use xlink:href="img/svg/sprite.svg#close"/>
+          </svg>
+        </button>
+      </div>
+    </aside>
 
       <script src="js/vendor/svg4everybody.min.js"></script>
       <script>svg4everybody();</script>

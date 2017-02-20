@@ -103,6 +103,10 @@
     border: none;
     background-color: transparent;
     border-radius: 0;
+
+    svg {
+      stroke: white;
+    }
   }
 
   @media (min-width: $screen-sm) {
