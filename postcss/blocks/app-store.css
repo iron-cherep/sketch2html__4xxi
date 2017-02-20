@@ -1,4 +1,4 @@
-.popup {
+.app-store {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,7 +20,7 @@
 
 }
 
-.popup__logo {
+.app-store__logo {
   display: inline-block;
   margin-right: 7.5px;
   width: 32px;
@@ -31,14 +31,14 @@
   border-radius: 50%;
 }
 
-.popup__info {
+.app-store__info {
   margin-top: 10px;
   margin-bottom: 8.5px;
 
   vertical-align: middle;
 }
 
-.popup__header {
+.app-store__header {
   margin: 0;
 
   font-size: 14px;
@@ -46,7 +46,7 @@
   font-weight: 500;
 }
 
-.popup__description {
+.app-store__description {
   margin: 0;
 
   font-size: 11px;
@@ -63,7 +63,7 @@
   }
 }
 
-.popup__addition {
+.app-store__addition {
   display: none;
 
   @media (min-width: $screen-sm) {
@@ -71,7 +71,7 @@
   }
 }
 
-.popup__agent {
+.app-store__agent {
 
   &--apple {
     display: none;
@@ -91,7 +91,7 @@
   }
 }
 
-.popup__button {
+.app-store__button {
 
   &--download {
     margin-right: 3.625%;

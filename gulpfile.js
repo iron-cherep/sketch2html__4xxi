@@ -8,7 +8,9 @@ var rename = require("gulp-rename");
 var del = require("del");
 var sourcemaps = require("gulp-sourcemaps");
 var imagemin = require("gulp-imagemin");
+
 var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
 
 var postcss = require("gulp-postcss");
 var cssnext = require("postcss-cssnext");
@@ -74,7 +76,7 @@ gulp.task("images", function() {
 });
 
 ////
-//Оптимизирует SVG-изображения. Не заменяет оригинальных файлов.
+//Оптимизирует SVG-изображения и создаёт спрайт. Не заменяет оригинальных файлов.
 ////
 gulp.task("svgmin", function() {
   return gulp.src([
@@ -83,8 +85,25 @@ gulp.task("svgmin", function() {
     base: "."
   })
     .pipe(svgmin())
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/svg"));
 });
+
+
+gulp.task("symbols", function() {
+  return gulp.src("build/img/icons-for-sprite/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("build/img"));
+});
+
 
 ////
 //Активирует browser-sync с заданными параметрами.

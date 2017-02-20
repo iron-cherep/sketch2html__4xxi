@@ -5,6 +5,7 @@ window.onload = function() {
   $(".list__info").next().slideToggle();
 
 
+
   // переключает состояние списка по клику на заголовок
   $(".list__info").click(function() {
     $(this).next().slideToggle();
