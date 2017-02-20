@@ -1,21 +1,33 @@
 .social {
-  display: inline-block;
-  float: right;
-  width: 50%;
+  display: block;
+  order: 2;
   max-width: 140px;
   margin: 0;
-  margin-right: 5px;
   padding: 0;
 
   vertical-align: middle;
 
   @mixin clearfix;
+
+  @media (min-width: $screen-sm) {
+    width: 40%;
+    max-width: none;
+    margin-left: auto;
+  }
 }
 .social__item {
   display: none;
 
   &--toggle {
     display: block;
+  }
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+
+    &--toggle {
+      display: none;
+    }
   }
 }
 
@@ -37,5 +49,26 @@
   }
 }
 
-.social__link {}
-.social__button {}
+.social__button {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  padding: 5px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.social__link {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+
+  font-size: 13px;
+  color: white;
+
+  border-radius: 4px;
+  background-color: #92b6c4;
+}

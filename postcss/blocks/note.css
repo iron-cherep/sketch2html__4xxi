@@ -2,16 +2,30 @@
   position: relative;
   overflow: hidden;
 
-  margin: 12px 3.75%;
+  margin-bottom: 12px;
   padding: 16px;
 
   border-radius: 5px;
   background-color: #f7f8f8;
 
+
+  @media (min-width: $screen-sm) {
+    padding: 30px;
+  }
+
+  @media (min-width: $screen-lg) {
+    &--starred,
+    &--protected {
+      display: block;
+    }
+  }
+
   &--starred {
     @mixin note-status starred;
   }
   &--protected {
+    display: none;
+
     @mixin note-status protected;
 
     .note__footer {
@@ -23,6 +37,8 @@
     }
   }
   &--archived {
+    display: none;
+
     @mixin note-status archived;
 
     opacity: 0.7;
@@ -42,6 +58,11 @@
   margin-bottom: 10px;
 
   text-align: right;
+
+  @media (min-width: $screen-sm) {
+    margin-top: 24px;
+    margin-bottom: -3px;
+  }
 }
 
 .note__time {

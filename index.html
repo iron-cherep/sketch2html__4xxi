@@ -22,31 +22,35 @@
       <img class="popup__logo" src="img/app-icon@3x.png" alt="app-logo">
       <div class="popup__info">
         <p class="popup__header">Centrallo</p>
-        <p class="popup__description">Free on the Google Play</p>
+        <p class="popup__description">
+          <span class="popup__addition">Download it for </span>free on the
+          <span class="popup__agent  popup__agent--android">Google Play</span>
+          <span class="popup__agent  popup__agent--apple">App Store</span>
+        </p>
       </div>
       <button class="button  popup__button  popup__button--download">Download</button>
-      <button class="popup__button  popup__button--close">
-        <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><title>D50C2279-3755-4590-B1A5-615F381B3F8C</title><g stroke="#FFF" fill="none" fill-rule="evenodd"><path d="M.63 11.641L11.818.453M11.818 11.641L.63.453"/></g></svg>
-       </button>
+      <button class="popup__button  popup__button--close" id="close-app-popup">
+        <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd"><path d="M.63 11.641L11.818.453M11.818 11.641L.63.453"/></g></svg>
+     </button>
+    </aside>
+
+    <aside class="account-status">
+      <h1 class="account-status__main-header">
+        <img src="img/logo@3x.png" class="account-status__logo">
+        Centrallo
+      </h1>
+      <a href="#" class="account-status__link  account-status__link--signup">Sign up
+        <span class="account-status__addition">for free</span>
+      </a>
+      <span class="account-status__offer"> — Start publishing in minutes</span>
+      <a href="#" class="account-status__link  account-status__link--login">Log in</a>
     </aside>
 
     <header class="page-header">
 
-      <div class="page-header__account-status">
-        <h1 class="page-header__main-header">
-          <img src="img/logo@3x.png" class="page-header__logo">
-          Centrallo
-        </h1>
-        <a href="#" class="page-header__link  page-header__link--signup">Sign up
-          <span class="page-header__addition">for free</span>
-        </a>
-        <span class="page-header__offer">Start publishing in minutes</span>
-        <a href="#" class="page-header__link  page-header__link--login">Log in</a>
-      </div>
-
       <h3 class="page-header__user">
         <img src="img/ava@3x.png" alt="avatar" class="page-header__avatar">
-        Konstantin Vladimirskiy
+        <span class="page-header__user-name">Konstantin Vladimirskiy</span>
       </h3>
 
       <ul class="social">
@@ -55,9 +59,6 @@
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4.973 7.87a2.52 2.52 0 0 0 .015-.616l6.875-2.864a2.5 2.5 0 1 0-.862-1.806l-7 2.916a2.5 2.5 0 1 0-.097 4.069l7.123 3.562a2.5 2.5 0 1 0 1.07-1.7L4.972 7.869z" fill="#00AEFF" fill-rule="evenodd"/></svg>
             Share
           </button>
-        </li>
-        <li class="social__item">
-          <span class="social__link">http://cll.io/a6lnu</span>
         </li>
         <li class="social__item">
           <button class="social__button">
@@ -78,6 +79,9 @@
           <button class="social__button">
             <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M.378 4.81h2.924v10.189H.378V4.809zm1.388-1.275h-.022C.686 3.535 0 2.756 0 1.77 0 .764.706 0 1.786 0c1.079 0 1.742.762 1.763 1.767 0 .987-.684 1.768-1.783 1.768zM15 15h-3.315V9.726c0-1.38-.519-2.321-1.66-2.321-.871 0-1.356.635-1.582 1.248-.085.22-.072.526-.072.833V15H5.087s.042-9.341 0-10.19h3.284v1.599c.194-.7 1.244-1.697 2.919-1.697 2.078 0 3.71 1.466 3.71 4.621V15z" fill="#FFF" fill-rule="evenodd"/></svg>
           </button>
+        </li>
+        <li class="social__item">
+          <span class="social__link">http://cll.io/a6lnu</span>
         </li>
       </ul>
 
@@ -161,8 +165,8 @@
       <article class="note">
         <div class="media">
           <div class="media__video-container">
-            <video class="media__video"></video>
             <img src="img/video@3x.png" alt="video" class="media__video-preview">
+            <video class="media__video"></video>
             <button class="media__play-button">
               <svg width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-1 -1)" fill="none" fill-rule="evenodd"><ellipse fill-opacity=".9" fill="#00ADFF" cx="30.4" cy="30.4" rx="29.4" ry="29.4"/><path d="M40.246 30.47c.472.294.472.768 0 1.062l-14.392 8.937c-.472.293-.854.075-.854-.461V21.994c0-.547.382-.754.854-.46l14.392 8.937z" fill="#FFF"/></g></svg>
             </button>
@@ -183,7 +187,7 @@
       <article class="note">
         <p class="note__text">The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.</p>
         <div class="media">
-          <img src="img/photo-3@3x.png" alt="photo" class="media__photo  media__photo--small  media__photoz--with-gutter">
+          <img src="img/photo-3@3x.png" alt="photo" class="media__photo  media__photo--small">
           <img src="img/photo-4@3x.png" alt="photo" class="media__photo  media__photo--small">
           <img src="img/photo-5@3x.png" alt="photo" class="media__photo">
           <img src="img/photo-6@3x.png" alt="photo" class="media__photo">

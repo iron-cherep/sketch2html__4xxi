@@ -1,25 +1,72 @@
 .media {
   position: relative;
-  font-size: 0;
-  padding-bottom: 24px;
 
-  @mixin bottom-border #bdbdbd;
+  margin-right: -$media-padding-xs;
+  margin-left: -$media-padding-xs;
+  padding-bottom: 18px;
+
+  font-size: 0;
+
+  @mixin media-bottom-border #bdbdbd;
+
+  @media (min-width: $screen-sm) {
+    margin-right: -$media-padding-sm;
+    margin-left: -$media-padding-sm;
+
+    padding-bottom: 12px;
+  }
+}
+
+.media .media__video-container,
+.media .media__photo {
+  /* задаёт отступ между идущими в ряд элементами */
+
+  padding-right: $media-padding-xs;
+  padding-left: $media-padding-xs;
+
+  @media (min-width: $screen-sm) {
+    padding-right: $media-padding-sm;
+    padding-left: $media-padding-sm;
+  }
 }
 
 .media__video-container {
   position: relative;
 
+  display: inline-block;
   max-width: 100%;
-  min-height: 46.875vw;
   margin-bottom: 6px;
+
+  font-size: 0;
+
+  @media (min-width: $screen-sm) {
+    height: 120px;
+    width: auto;
+  }
 }
 
-.media__video-preview {
+.media__video {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
 
   width: 100%;
   height: 100%;
+
+  @media (min-width: $screen-sm) {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.media__video-preview {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 380px) {
+    margin-bottom: 12px;
+    height: 120px;
+    width: auto;
+  }
 }
 
 .media__play-button {
@@ -44,7 +91,10 @@
   &--small {
     height: 120px;
   }
-  &--with-gutter {
-    margin-right: 6px;
+
+  @media (min-width: 380px) {
+    height: 120px;
+    width: auto;
+    margin-bottom: 12px;
   }
 }

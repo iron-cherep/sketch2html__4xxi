@@ -2,16 +2,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right: $page-padding-xs;
+  padding-left: $page-padding-xs;
 
   color: white;
 
   background-color: #37b7ec;
+
+  @media (min-width: $screen-sm) {
+    padding-right: $page-padding-sm;
+    padding-left: $page-padding-sm;
+  }
 }
 
 .popup__logo {
   display: inline-block;
   margin-right: 7.5px;
-  margin-left: 12.5px;
   width: 32px;
   height: 32px;
 
@@ -40,20 +46,63 @@
 
   font-size: 11px;
   line-height: 12px;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $screen-sm) {
+    &:first-letter {
+      text-transform: none;
+    }
+  }
+}
+
+.popup__addition {
+  display: none;
+
+  @media (min-width: $screen-sm) {
+    display: inline;
+  }
+}
+
+.popup__agent {
+
+  &--apple {
+    display: none;
+  }
+  &--android {
+    display: inline;
+  }
+
+  /* в соответствии с макетом */
+  @media (min-width: $screen-sm) {
+    &--apple {
+      display: inline;
+    }
+    &--android {
+      display: none;
+    }
+  }
 }
 
 .popup__button {
 
   &--download {
-    margin-right: 11.6px;
+    margin-right: 3.625%;
     margin-left: auto;
   }
   &--close {
-    margin-right: 7.2px;
     padding: 5px;
 
     border: none;
     background-color: transparent;
     border-radius: 0;
+  }
+
+  @media (min-width: $screen-sm) {
+    &--download {
+      margin-right: 3.255%;
+    }
   }
 }

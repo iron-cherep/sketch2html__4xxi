@@ -36,9 +36,30 @@
   }
 }
 
+@define-mixin media-bottom-border $color {
+  &::after {
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: scaleY(0.5) translateX(-50%);
+
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% - $media-padding-xs * 2);
+
+    border-bottom: 1px solid $color;
+
+    content: "";
+
+    @media (min-width: $screen-sm) {
+      width: calc(100% - $media-padding-sm * 2);
+    }
+  }
+}
+
+
 /*
   добавляет отметку в правом верхнем
-  углу заметки в соответствии с её заметки
+  углу записи в соответствии с её состоянием
 */
 @define-mixin note-status $state {
   &::before {

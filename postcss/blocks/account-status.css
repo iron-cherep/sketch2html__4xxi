@@ -1,0 +1,92 @@
+.account-status {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  padding-right: $page-padding-xs;
+  padding-left: $page-padding-xs;
+
+  background-color: #3c434a;
+
+  @media (min-width: $screen-sm) {
+    justify-content: center;
+    padding-right: $page-padding-sm;
+    padding-left: $page-padding-sm;
+  }
+}
+
+.account-status__main-header {
+  font-size: 0;
+}
+
+.account-status__logo {
+  position: absolute;
+  top: 50%; left: $page-padding-xs;
+  transform: translateY(-60%) rotate(0.5deg);
+
+  width: 108px;
+  height: 26px;
+
+  @media (min-width: $screen-sm) {
+    left: $page-padding-sm;
+  }
+}
+
+.account-status__link {
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 14px;
+
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+
+  &--signup {
+    margin-left: auto;
+    margin-right: 24px;
+
+    color: #37b7ec;
+  }
+  &--login {}
+
+  @media (min-width: $screen-sm) {
+    &--signup {
+      margin-right: 0.5em;
+      margin-left: 0;
+    }
+    &--login {
+      position: absolute;
+      top: 50%; right: $page-padding-sm;
+      transform: translateY(-50%);
+
+      margin: 0;
+    }
+  }
+}
+
+.account-status__addition {
+  display: none;
+
+  @media (min-width: $screen-sm) {
+    display: inline;
+  }
+}
+
+.account-status__offer {
+  display: none;
+
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 14px;
+
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #a2acb2;
+  }
+}

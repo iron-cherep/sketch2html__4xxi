@@ -1,3 +1,9 @@
+$page-padding-xs:        3.75%;
+$page-padding-sm:        3.125%;
+
+$media-padding-xs:       3.25px;
+$media-padding-sm:       6.4px;
+
 /*
   media
 */
@@ -9,17 +15,17 @@ $screen-lg:              1200px;
 $screen-xl:              1440px;
 $screen-hd:              1900px;
 
-$screen-xs-max:          (@screen-sm - 1);
-$screen-sm-max:          (@screen-md - 1);
-$screen-md-max:          (@screen-lg - 1);
-$screen-lg-max:          (@screen-xl - 1);
-$screen-xl-max:          (@screen-hd - 1);
+$screen-xs-max:          ($screen-sm - 1);
+$screen-sm-max:          ($screen-md - 1);
+$screen-md-max:          ($screen-lg - 1);
+$screen-lg-max:          ($screen-xl - 1);
+$screen-xl-max:          ($screen-hd - 1);
 
+$screen-sm-min:          321px;
 /*
   цвета
 */
 $body-background:        #adc9d4;
-
 
 /*
   типографика

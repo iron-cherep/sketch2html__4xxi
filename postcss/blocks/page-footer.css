@@ -1,14 +1,33 @@
 .page-footer {
   position: relative;
 
+  margin-top: 55px;
   padding-right: 3.75%;
   padding-left: 3.75%;
 
   background-color: #3c434a;
+
+  @media (min-width: $screen-sm) {
+    text-align: center;
+  }
 }
 
 .page-footer__copyright {
   display: none;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #979ea4;
+
+  @media (min-width: $screen-sm) {
+    position: absolute;
+    top: 50%; left: $page-padding-sm;
+    transform: translateY(-50%);
+
+    display: inline-block;
+  }
 }
 
 .page-footer__links {
@@ -41,10 +60,14 @@
 
 .page-footer__social {
   position: absolute;
-  right: 3.75%; top: 50%;
+  right: $page-padding-xs; top: 50%;
   transform: translateY(-50%);
 
   display: inline-block;
+
+  @media (min-width: $screen-sm) {
+    right: $page-padding-sm;
+  }
 }
 
 .page-footer__social-link {

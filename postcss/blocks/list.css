@@ -1,21 +1,40 @@
 .list {
+  position: relative;
   overflow: hidden;
   margin: 0;
   padding-left: 28px;
 
   &--active .list__title::before {
     background-image: url(../img/svg/list--active.svg);
-    /* устанавливает иконку для активного списка*/
+    /* устанавливает иконку для активного списка */
+  }
+
+  @media (min-width: $screen-sm) {
+
+    &:not(:last-of-type) {
+      @mixin bottom-border #bdbdbd;
+    }
   }
 }
 
 .list__info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+
   margin-bottom: 5px;
 
   font-size: 0;
 
   background: #f7f8f8;
   cursor: pointer;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .list__items {
@@ -55,20 +74,36 @@
 
     content: "";
   }
+
+  @media (min-width: $screen-sm) {
+    width: auto;
+    margin: 0;
+    margin-right: auto;
+  }
+
 }
 .list__time {
   display: inline-block;
-  width: 50%;
+  margin-right: auto;
 
   text-align: left;
   font-size: 16px;
   color: #858585;
+
+  @media (min-width: $screen-sm) {
+    margin-right: 40px;
+  }
+
 }
 .list__length {
   display: inline-block;
-  width: 50%;
 
   text-align: right;
   font-size: 16px;
   color: #858585;
+
+  @media (min-width: $screen-sm) {
+
+  }
+
 }
