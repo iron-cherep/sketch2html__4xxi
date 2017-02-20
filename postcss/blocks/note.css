@@ -1,24 +1,11 @@
 .note {
   position: relative;
-  overflow: hidden;
 
   margin-bottom: 12px;
   padding: 16px;
 
   border-radius: 5px;
   background-color: #f7f8f8;
-
-
-  @media (min-width: $screen-sm) {
-    padding: 30px;
-  }
-
-  @media (min-width: $screen-lg) {
-    &--starred,
-    &--protected {
-      display: block;
-    }
-  }
 
   &--starred {
     @mixin note-status starred;
@@ -49,6 +36,35 @@
     }
     .note__time {
       float: none;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: 30px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--protected {
+      display: block;
+
+      .note__footer {
+        margin-top: 0;
+        vertical-align: middle;
+        @mixin note-status-message protected;
+      }
+    }
+    &--archived {
+      display: block;
+
+      .note__footer {
+        margin-top: 0;
+        vertical-align: middle;
+        @mixin note-status-message archived;
+      }
     }
   }
 }
@@ -103,11 +119,19 @@
       transition: transform 0.4s ease-in-out;
     }
   }
+
+  @media (min-width: $screen-lg) {
+    &--link:hover .note__share-link {
+      transform: translateX(50%) scale(1);
+      transition: transform 0.4s ease-in-out;
+    }
+  }
 }
 
 .note__share-link {
   position: absolute;
   top: -3em; right: 0;
+  z-index: 10;
 
   display: block;
   margin: 0;
@@ -118,6 +142,7 @@
   color: white;
 
   border-radius: 3px;
+  background: rgb(64,64,64);
   background: rgba(64,64,64, 0.7);
 
   transform: scale(0);
@@ -132,6 +157,17 @@
     border-top-color: rgba(64,64,64, 0.7);
 
     content: "";
+  }
+
+  @media (min-width: $screen-lg) {
+    right: 50%;
+    transform: translateX(50%) scale(0);
+    transform-origin: bottom center;
+
+    &::after {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
 }
 

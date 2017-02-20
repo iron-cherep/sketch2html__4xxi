@@ -2,12 +2,18 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  align-content: center;
   padding-right: $page-padding-xs;
   padding-left: $page-padding-xs;
 
   text-align: right;
 
-  @media (min-width: $screen-sm) {
+  @media (min-width: 1000px) {
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -23,8 +29,8 @@
 
   @media (min-width: $screen-sm) {
     width: 60%;
-    margin-top: 30px;
-    margin-bottom: 28px;
+    margin-top: 20px;
+    margin-bottom: 18px;
 
     font-size: 18px;
   }
@@ -56,6 +62,7 @@
 
   @media (min-width: $screen-sm) {
     margin-right: 0;
+    margin-bottom: 10px;
     order: 4;
   }
 }
@@ -71,5 +78,10 @@
 
   @media (min-width: $screen-sm) {
     width: 50%;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  @media (min-width: $screen-lg) {
+    font-size: 20px;
   }
 }

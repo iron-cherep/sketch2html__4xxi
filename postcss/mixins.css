@@ -56,7 +56,6 @@
   }
 }
 
-
 /*
   добавляет отметку в правом верхнем
   углу записи в соответствии с её состоянием
@@ -65,49 +64,63 @@
   &::before {
     position: absolute;
     top: 0; right: 0;
-    transform: translate(34px, -34px) rotate(45deg);
 
     display: block;
-    width: 68px;
-    height: 68px;
+    width: 40px;
+    height: 40px;
+
+    border-top-right-radius: 5px;
+    content: "";
 
     @if $(state) == starred {
-      background-color: #ef4b2b;
+      background-image: url(../img/svg/star.svg),
+                        linear-gradient(45deg, transparent 0%, transparent 51%,  #ef4b2b 51%,  #ef4b2b 100%);
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      background-size: 16px 15.2px, 100% 100%;
     }
     @if $(state) == archived {
-      background-color: #979da3;
+      background-image: url(../img/svg/box.svg),
+                        linear-gradient(45deg, transparent 0%, transparent 51%,  #979da3 51%,  #979da3 100%);
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      background-size: 16px 14px, 100% 100%;
     }
     @if $(state) == protected {
-      background-color: #3c434a;
+      background-image: url(../img/lock.png),
+                        linear-gradient(45deg, transparent 0%, transparent 51%,  #3c434a 51%,  #3c434a 100%);
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      background-size: 12px 15px, 100% 100%;
     }
 
-    content: "";
+    @media (min-width: $screen-sm) {
+      width: 44px;
+      height: 44px;
+    }
+    @media (min-width: $screen-sm) {
+      width: 48px;
+      height: 48px;
+    }
   }
+}
 
-  &::after {
+@define-mixin note-status-message $state {
+  &::before {
     position: absolute;
-    top: 0; right: 0;
+    top: 50%; right: 30px;
+    transform: translateY(-50%);
 
-    display: block;
-    width: 24px;
-    height: 24px;
+    display: inline-block;
 
-    background-position: center;
-    background-repeat: no-repeat;
-
-    @if $(state) == starred {
-      background-image: url(../img/svg/star.svg);
-      background-size: 16px 15.2px;
-    }
     @if $(state) == archived {
-      background-image: url(../img/svg/box.svg);
-      background-size: 16px 14px;
+      color: #858585;
+      content: "Protected";
     }
     @if $(state) == protected {
-      background-image: url(../img/lock.png);
-      background-size: 12px 15px;
+      color: #009ce6;
+      content: "Archived";
     }
 
-    content: "";
   }
 }
