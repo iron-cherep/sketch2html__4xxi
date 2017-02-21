@@ -29,8 +29,6 @@
   z-index: 100;
   transform: translate(-50%, -50%);
 
-  /*display: */
-
   border-radius: 3px;
   background-color: #f0f5fa;
 
@@ -42,8 +40,8 @@
   position: relative;
 
   margin: 0;
-  padding-top: 18px;
-  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 14px;
 
   font-size: 22px;
   font-weight: 400;
@@ -59,7 +57,7 @@
   display: block;
   margin: 0 64.5px;
   padding-top: 21px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   font-size: 20px;
   text-align: center;
@@ -79,27 +77,41 @@
 
   vertical-align: middle;
 
+  cursor: pointer;
+
   svg {
     fill: white;
   }
 
   &--facebook {
+    padding-bottom: 2px;
+
     background-color: #3a589c;
+
+    svg {
+      width: 9px;
+      height: 19px;
+    };
   }
   &--twitter {
     background-color: #29a9e1;
   }
   &--vk {
+    padding-right: 6px;
+
     background-color: #5a7ba0;
   }
   &--linkedin {
+    padding-left: 8px;
+    padding-bottom: 5px;
+
     background-color: #007bb8;
   }
 }
 
 .popup__close {
   position: absolute;
-  top: 5.5px; right: 5.5px;
+  top: 6px; right: 7px;
 
   padding: 5px;
 
@@ -107,6 +119,8 @@
   border-radius: 0;
   border: none;
   outline: none;
+
+  cursor: pointer;
 
   svg {
     stroke: #757e87;

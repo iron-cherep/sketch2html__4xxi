@@ -2,15 +2,21 @@
   position: relative;
   overflow: hidden;
   margin: 0;
+  margin-bottom: 12px;
   padding-left: 28px;
 
   &--active .list__title::before {
     background-image: url(../img/svg/list--active.svg);
     /* устанавливает иконку для активного списка */
   }
+  &:last-of-type {
+    margin-bottom: -6px;
+  }
 
   @media (min-width: $screen-sm) {
-
+    &:last-of-type {
+      /*margin-bottom: -8px;*/
+    }
     &:not(:last-of-type) {
       @mixin bottom-border #bdbdbd;
     }
@@ -32,8 +38,9 @@
 
   @media (min-width: $screen-sm) {
     margin-bottom: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-left: 4px;
+    padding-top: 1px;
+    padding-bottom: 14px;
   }
 }
 
@@ -53,8 +60,8 @@
 
   display: inline-block;
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 1px;
+  margin-bottom: 4px;
 
   font-size: 16px;
   font-weight: 500;
@@ -65,7 +72,7 @@
 
   &::before {
     position: absolute;
-    top: 2px; left: -28px;
+    top: 2px; left: -27.5px;
 
     display: block;
     width: 16px;
@@ -81,6 +88,10 @@
     width: auto;
     margin: 0;
     margin-right: auto;
+
+    &::before {
+      left: -32px;
+    }
   }
 
 }
@@ -93,7 +104,12 @@
   color: #858585;
 
   @media (min-width: $screen-sm) {
-    margin-right: 40px;
+    width: 100px;
+    margin-right: 0;
+    padding-left: 15px;
+    order: 10;
+
+    text-align: right;
   }
 
 }
@@ -105,7 +121,7 @@
   color: #858585;
 
   @media (min-width: $screen-sm) {
-
+    width: 100px;
   }
 
 }

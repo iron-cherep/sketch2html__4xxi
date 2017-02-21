@@ -1,12 +1,16 @@
 .map {
   position: relative;
-  margin-top: 30px;
+  margin-top: 23px;
   padding-bottom: 20px;
 
   @mixin bottom-border #bdbdbd;
 
   @media (min-width: $screen-sm) {
     margin-top: 24px;
+    padding-bottom: 17px;
+  }
+  @media (min-width: $screen-lg) {
+    padding-bottom: 19px;
   }
 }
 .map__container {
@@ -20,32 +24,39 @@
   @media (min-width: $screen-sm) {
     width: 300px;
     height: 200px;
+    margin-right: 11px;
   }
 }
 
 .map__info {
   display: inline-block;
   width: 100%;
-  padding-left: 11px;
 
   vertical-align: top;
 
   @media (min-width: $screen-sm) {
-    width: 340px;
-    width: calc(100% - 310px);
+    width: 300px;
+  }
+  @media (min-width: $screen-lg) {
+    margin-top: 1px;
+    width: 500px;
   }
 }
 
 .map__header {
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.31;
+  line-height: 1.35;
   color: #383838;
 
   @media (min-width: $screen-sm) {
     margin-top: 0;
+  }
+  @media (min-width: $screen-sm) {
+    margin-bottom: 4px;
   }
 }
 .map__address {
@@ -57,8 +68,8 @@
 .map__state {
   display: inline-block;
   width: 100%;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 4px;
+  margin-bottom: 12px;
 
   color: #858585;
 }

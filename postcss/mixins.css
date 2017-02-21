@@ -74,9 +74,9 @@
 
     @if $(state) == starred {
       background-image: url(../img/svg/star.svg),
-                        linear-gradient(45deg, transparent 0%, transparent 51%,  #ef4b2b 51%,  #ef4b2b 100%);
+                        linear-gradient(45deg, transparent 0%, transparent 54%,  #ef4b2b 54%,  #ef4b2b 100%);
       background-repeat: no-repeat;
-      background-position: 80% 20%;
+      background-position: 85% 12%;
       background-size: 16px 15.2px, 100% 100%;
     }
     @if $(state) == archived {
@@ -115,11 +115,11 @@
 
     @if $(state) == archived {
       color: #858585;
-      content: "Protected";
+      content: "Archived";
     }
     @if $(state) == protected {
       color: #009ce6;
-      content: "Archived";
+      content: "Protected";
     }
 
   }

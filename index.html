@@ -106,27 +106,27 @@
       <article class="note  note--starred">
         <form class="form">
           <label class="form__checkbox-label">
-            <input type="checkbox" class="form__checkbox"><div class="form__custom-checkbox"></div>
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
             Referral Accepted and Invited invitations not sorted by A-Z
           </label>
 
           <label class="form__checkbox-label">
-            <input type="checkbox" class="form__checkbox"><div class="form__custom-checkbox"></div>
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
             Inbox shows me 242 items - that includes Done items; Only show me active
           </label>
 
           <label class="form__checkbox-label">
-            <input type="checkbox" class="form__checkbox"><div class="form__custom-checkbox"></div>
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
             Inbox defaults to show done items - it should not
           </label>
 
           <label class="form__checkbox-label">
-            <input type="checkbox" class="form__checkbox"><div class="form__custom-checkbox"></div>
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
             Lists default to Show Done - they should not
           </label>
 
           <label class="form__checkbox-label">
-            <input type="checkbox" class="form__checkbox"><div class="form__custom-checkbox"></div>
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
             Recent view should sort by Created and show no Done items
           </label>
         </form>
@@ -180,7 +180,9 @@
             <img src="img/video@3x.png" alt="video" class="media__video-preview">
             <video class="media__video"></video>
             <button class="media__play-button">
-              <svg width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-1 -1)" fill="none" fill-rule="evenodd"><ellipse fill-opacity=".9" fill="#00ADFF" cx="30.4" cy="30.4" rx="29.4" ry="29.4"/><path d="M40.246 30.47c.472.294.472.768 0 1.062l-14.392 8.937c-.472.293-.854.075-.854-.461V21.994c0-.547.382-.754.854-.46l14.392 8.937z" fill="#FFF"/></g></svg>
+              <svg role="img" title="play" width="inherit" height="inherit">
+                <use xlink:href="img/svg/sprite.svg#play"/>
+              </svg>
             </button>
           </div>
           <img src="img/photo-1@3x.png" alt="photo" class="media__photo">
@@ -188,7 +190,7 @@
         </div>
         <time class="note__due-on">Due on Feb 13, 12:42 PM</time>
         <footer class="note__footer">
-          <time class="note__time">Mar 13</time>
+          <time class="note__time">Feb 14</time>
           <button class="note__button  note__button--share">share</button>
           <button class="note__button  note__button--link">link
             <span class="note__share-link">http://cll.io/a6lnu</span>
@@ -198,7 +200,7 @@
 
       <article class="note">
         <p class="note__text">The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.</p>
-        <div class="media">
+        <div class="media  media--before-map">
           <img src="img/photo-3@3x.png" alt="photo" class="media__photo  media__photo--small">
           <img src="img/photo-4@3x.png" alt="photo" class="media__photo  media__photo--small">
           <img src="img/photo-5@3x.png" alt="photo" class="media__photo">
@@ -264,7 +266,7 @@
         <li class="page-footer__links-item"><a href="#" class="page-footer__link">CONTACT</a></li>
       </ul>
       <div class="page-footer__social">
-        <a href="#" class="page-footer__social-link">
+        <a href="#" class="page-footer__social-link  page-footer__social-link--twitter">
           <svg role="img" title="Twitter" width="16" height="13">
             <use xlink:href="img/svg/sprite.svg#soc-tw"/>
           </svg>

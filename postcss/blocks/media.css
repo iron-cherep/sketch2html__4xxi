@@ -13,7 +13,14 @@
     margin-right: -$media-padding-sm;
     margin-left: -$media-padding-sm;
 
-    padding-bottom: 12px;
+    padding-bottom: 13px;
+  }
+  @media (min-width: $screen-lg) {
+    padding-bottom: 20px;
+
+    &--before-map {
+      padding-bottom: 13px;
+    }
   }
 }
 
@@ -43,6 +50,9 @@
     height: 120px;
     width: auto;
   }
+  @media (min-width: $screen-lg) {
+    height: 140px;
+  }
 }
 
 .media__video {
@@ -67,12 +77,18 @@
     height: 120px;
     width: auto;
   }
+  @media (min-width: $screen-lg) {
+    height: 140px;
+  }
 }
 
 .media__play-button {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 75px;
+  height: 75px;
 
   background: transparent;
   border: none;
@@ -96,5 +112,8 @@
     height: 120px;
     width: auto;
     margin-bottom: 12px;
+  }
+  @media (min-width: $screen-lg) {
+    height: 140px;
   }
 }

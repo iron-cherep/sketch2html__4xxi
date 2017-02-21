@@ -47,17 +47,17 @@
   top: 50%; left: $page-padding-xs;
   transform: translateY(-60%) rotate(0.5deg);
 
-  width: 108px;
+  width: 104px;
   height: 26px;
 
   @media (min-width: $screen-sm) {
     left: $page-padding-sm;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: $screen-lg) {
     left: 0;
 
-    width: 140px;
-    height: 34px;
+    width: 130px;
+    height: 28px;
   }
 }
 
@@ -81,7 +81,7 @@
 
   @media (min-width: $screen-sm) {
     &--signup {
-      margin-right: 0.5em;
+      margin-right: 4px;
       margin-left: 0;
     }
     &--login {
@@ -98,12 +98,12 @@
     }
   }
   @media (min-width: $screen-lg) {
+    margin-top: 23px;
+    margin-bottom: 19px;
+
     &--login {
       margin: 0;
     }
-
-    margin-top: 24px;
-    margin-bottom: 22px;
   }
 }
 
@@ -121,11 +121,13 @@
 
   @media (min-width: $screen-sm) {
     display: inline-block;
-    margin-top: 16px;
-    margin-bottom: 14px;
+    margin-top: 17px;
+    margin-bottom: 13px;
 
     font-size: 13px;
     font-weight: 500;
+
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     color: #a2acb2;
   }
