@@ -13,7 +13,7 @@
     margin-right: -$media-padding-sm;
     margin-left: -$media-padding-sm;
 
-    padding-bottom: 13px;
+    padding-bottom: 15px;
   }
   @media (min-width: $screen-lg) {
     padding-bottom: 20px;
@@ -87,15 +87,21 @@
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 75px;
-  height: 75px;
+  width: 64px;
+  height: 64px;
 
-  background: transparent;
+  background: url(../img/play.png) center no-repeat;
+  background-size: contain;
   border: none;
   outline: none;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (min-width: $screen-sm) {
+    width: 52px;
+    height: 52px;
   }
 }
 

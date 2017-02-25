@@ -44,12 +44,12 @@
 }
 
 .map__header {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 0.55em;
+  margin-bottom: 0.6em;
 
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 21px;
   color: #383838;
 
   @media (min-width: $screen-sm) {
@@ -63,17 +63,20 @@
   display: inline-block;
   width: 100%;
   margin: 0;
+  line-height: 21px;
   color: #858585;
 }
 .map__state {
   display: inline-block;
   width: 100%;
   margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 0.9em;
 
+  line-height: 21px;
   color: #858585;
 }
 .map__link {
+  line-height: 21px;
   color: #00adff;
 
   &:link, &:visited {

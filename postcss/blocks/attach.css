@@ -8,13 +8,11 @@
   font-size: 0;
 
   @media (min-width: $screen-sm) {
-    margin-right: 0;
-    margin-bottom: 16px;
-    margin-left: -8px;
-  }
-  @media (min-width: $screen-sm) {
-    margin-left: 8px;
+    margin-left: -7px;
     margin-bottom: 18px;
+  }
+  @media (min-width: $screen-lg) {
+    margin-left: 10px;
   }
 }
 
@@ -27,10 +25,6 @@
 
   cursor: pointer;
 
-  @media (min-width: $screen-sm) {
-    width: 120px;
-    margin-right: 33px;
-  }
   @media (min-width: $screen-sm) {
     width: 120px;
     margin-right: 33px;
@@ -52,6 +46,7 @@
   width: 100%;
 
   font-size: 14px;
+  line-height: 19px;
   color: #333333;
 
   @media (min-width: $screen-sm) {

@@ -1,3 +1,6 @@
+/*
+  отступы
+*/
 $page-padding-xs:        3.75%;
 $page-padding-sm:        3.125%;
 
@@ -7,7 +10,6 @@ $media-padding-sm:       6.4px;
 /*
   media
 */
-
 $screen-xs:              320px;
 $screen-sm:              768px;
 $screen-lg:              1200px;
@@ -24,9 +26,7 @@ $body-background:        #adc9d4;
 /*
   типографика
 */
-
 $font-helvetica:          "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-size-base:          16px;
-
-$line-height-base:        1.428571429;
+$line-height-base:        1.35;

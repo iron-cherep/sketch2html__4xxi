@@ -2,12 +2,12 @@
   position: relative;
   overflow: hidden;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   padding-left: 28px;
 
   &--active .list__title::before {
-    background-image: url(../img/svg/list--active.svg);
     /* устанавливает иконку для активного списка */
+    background-image: url(../img/svg/list--active.svg);
   }
   &:last-of-type {
     margin-bottom: -6px;
@@ -60,10 +60,11 @@
 
   display: inline-block;
   width: 100%;
-  margin-top: 1px;
-  margin-bottom: 4px;
+  margin-top: 0px;
+  margin-bottom: 8px;
 
   font-size: 16px;
+  line-height: 21px;
   font-weight: 500;
 
   &--top {
@@ -101,6 +102,7 @@
 
   text-align: left;
   font-size: 16px;
+  line-height: 18px;
   color: #858585;
 
   @media (min-width: $screen-sm) {

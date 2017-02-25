@@ -14,7 +14,7 @@ ul {
 
 html {
   font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: 1.35;
 }
 
 body {
