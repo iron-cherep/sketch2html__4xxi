@@ -52,6 +52,13 @@
   line-height: 24px;
   color: #494949;
 
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: rgba(29,29,29, 0.6);
+  }
+
   @media (min-width: $screen-sm) {
     margin-bottom: 0.3em;
   }

@@ -14,9 +14,6 @@
   }
 
   @media (min-width: $screen-sm) {
-    &:last-of-type {
-      /*margin-bottom: -8px;*/
-    }
     &:not(:last-of-type) {
       @mixin bottom-border #bdbdbd;
     }
@@ -35,6 +32,12 @@
 
   background: #f7f8f8;
   cursor: pointer;
+
+  time, span {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 
   @media (min-width: $screen-sm) {
     margin-bottom: 0;

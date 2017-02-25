@@ -25,6 +25,10 @@
 
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   @media (min-width: $screen-sm) {
     width: 120px;
     margin-right: 33px;

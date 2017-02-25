@@ -67,6 +67,12 @@
   svg {
     fill: white;
   }
+
+  &:hover {
+    svg {
+      fill: #37b7ec;
+    }
+  }
 }
 
 .social__link {

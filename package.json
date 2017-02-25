@@ -35,13 +35,13 @@
   "scripts": {
     "eslint": "eslint *.js",
     "stylelint": "stylelint *.css",
-    "pre-commit": [
-      "eslint",
-      "stylelint"
-    ],
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
+  "pre-commit": [
+    "eslint",
+    "stylelint"
+  ],
   "editorconfig-cli": [
     "*.html",
     "*.json",

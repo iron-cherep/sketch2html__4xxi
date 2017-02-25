@@ -2,6 +2,10 @@
   box-sizing: border-box;
 
   font-family: $font-helvetica;
+
+  transition: color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 *:link, *:visited {

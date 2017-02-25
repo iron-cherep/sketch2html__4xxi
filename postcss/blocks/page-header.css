@@ -70,6 +70,10 @@
 
   cursor: pointer;
 
+  &:hover {
+    background-color: #00aeff;
+  }
+
   @media (min-width: $screen-sm) {
     margin-top: -4px;
     margin-right: 0;

@@ -78,6 +78,9 @@
 
     color: #37b7ec;
   }
+  &:hover {
+    color: #00aeff;
+  }
 
   @media (min-width: $screen-sm) {
     &--signup {
