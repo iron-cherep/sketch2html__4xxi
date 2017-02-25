@@ -39,8 +39,8 @@
     "start": "npm run build && gulp serve"
   },
   "pre-commit": [
-    "eslint",
-    "stylelint"
+    "stylelint",
+    "eslint"
   ],
   "editorconfig-cli": [
     "*.html",
@@ -49,7 +49,7 @@
     "*.php",
     "js/**/*.js",
     "img/**/*.svg",
-    "less/**/*.{less}"
+    "postcss/**/*"
   ],
   "engines": {
     "node": "6.7"

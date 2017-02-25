@@ -25,7 +25,7 @@ var minifyCss = require("gulp-csso");
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
     .pipe(plumber())
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(postcss([
       precss(),
       cssnext()
@@ -33,7 +33,7 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"))
     .pipe(minifyCss())
     .pipe(rename("style.min.css"))
-    // .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
