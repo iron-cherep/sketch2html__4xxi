@@ -14,12 +14,16 @@ ul {
 
 html {
   font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: 1.35;
 }
 
 body {
   background-color: $body-background;
   background-image: url(../img/pat.png);
   background-repeat: repeat;
-  background-position: 0px 40px;
+  background-position: 0 50px;
+
+  @media (min-width: $screen-lg) {
+    background-position: 0 0;
+  }
 }

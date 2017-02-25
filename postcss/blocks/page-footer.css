@@ -14,7 +14,7 @@
   }
   @media (min-width: 1000px) {
     width: 960px;
-    margin-top: 90px;
+    margin-top: 91px;
     margin-right: auto;
     margin-left: auto;
     padding: 0;
@@ -55,6 +55,9 @@
   @media (min-width: 1000px) {
     left: 0;
   }
+  @media (min-width: $screen-lg) {
+    font-size: 12px;
+  }
 }
 
 .page-footer__links {
@@ -69,9 +72,22 @@
 
   &-item {
     display: inline-block;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-right: 14px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $screen-sm) {
+    position: relative;
+    left: 7px;
+  }
+  @media (min-width: $screen-lg) {
+    font-size: 12px;
+
+    &-item {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -101,11 +117,27 @@
 }
 
 .page-footer__social-link {
+  position: relative;
+
   display: inline-block;
-  margin-right: -15px;
-  padding: 15px;
+  margin-right: -5px;
+  padding: 10px;
 
   svg {
     fill: #8c9399;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding-right: 6px;
+  }
+  @media (min-width: $screen-lg) {
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    &--twitter {
+      top: 1px;
+    }
   }
 }

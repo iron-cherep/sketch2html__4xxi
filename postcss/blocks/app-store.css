@@ -22,19 +22,27 @@
 
 .app-store__logo {
   display: inline-block;
+  margin-top: 10px;
   margin-right: 7.5px;
+  margin-bottom: 8px;
   width: 32px;
   height: 32px;
 
   vertical-align: middle;
 
   border-radius: 50%;
+
+  @media (min-width: $screen-sm) {
+    width: 34px;
+    height: 33px;
+    margin-top: 9px;
+    margin-right: 6px;
+
+    border-radius: 0;
+  }
 }
 
 .app-store__info {
-  margin-top: 10px;
-  margin-bottom: 8.5px;
-
   vertical-align: middle;
 }
 
@@ -42,7 +50,7 @@
   margin: 0;
 
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   font-weight: 500;
 }
 
@@ -57,6 +65,9 @@
   }
 
   @media (min-width: $screen-sm) {
+    font-size: 12px;
+    line-height: 15px;
+
     &:first-letter {
       text-transform: none;
     }
@@ -99,6 +110,7 @@
   }
   &--close {
     padding: 5px;
+    padding-right: 0;
 
     border: none;
     background-color: transparent;
@@ -111,7 +123,10 @@
 
   @media (min-width: $screen-sm) {
     &--download {
-      margin-right: 3.255%;
+      padding-top: 8px;
+      padding-right: 28px;
+      padding-left: 28px;
+      margin-right: 24px;
     }
   }
 }

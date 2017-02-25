@@ -29,7 +29,7 @@
 }
 .form__custom-checkbox {
   position: absolute;
-  top: 0.2em; left: -5px;
+  top: 1px; left: 0;
 
   display: block;
   width: 14px;
@@ -46,13 +46,13 @@
 
   display: block;
   width: 100%;
-  margin-bottom: 8px;
-  padding-left: 20px;
+  margin-bottom: 0.2em;
+  padding-left: 23px;
 
-  line-height: 1.38;
+  line-height: 24px;
   color: #494949;
 
   @media (min-width: $screen-sm) {
-    margin-bottom: 10px;
+    margin-bottom: 0.3em;
   }
 }

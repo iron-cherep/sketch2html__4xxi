@@ -8,6 +8,10 @@
 
   text-align: right;
 
+  @media (min-width: $screen-sm) {
+    padding-right: $page-padding-sm;
+    padding-left: $page-padding-sm;
+  }
   @media (min-width: 1000px) {
     width: 960px;
     margin-right: auto;
@@ -22,15 +26,19 @@
   align-items: center;
   width: 100%;
   min-width: 264px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+  margin-left: 5px;
 
   font-size: 16px;
   font-weight: normal;
   color: #2c2f31;
 
   @media (min-width: $screen-sm) {
-    width: 60%;
-    margin-top: 20px;
-    margin-bottom: 18px;
+    width: 50%;
+    margin-top: 32px;
+    margin-bottom: 21px;
+    margin-left: 0;
 
     font-size: 18px;
   }
@@ -50,9 +58,9 @@
 
 .page-header__button {
   display: inline-block;
-  margin-right: 18px;
+  margin-right: 15.5px;
   margin-left: auto;
-  padding: 9px 8px;
+  padding: 9px 12px;
   order: 0;
 
   font-size: 13px;
@@ -60,15 +68,25 @@
 
   background-color: #37b7ec;
 
+  cursor: pointer;
+
   @media (min-width: $screen-sm) {
+    margin-top: -4px;
     margin-right: 0;
     margin-bottom: 10px;
+    padding: 9px 17px;
     order: 4;
+  }
+  @media (min-width: $screen-lg) {
+    margin-top: -12px;
   }
 }
 
 .page-header__post-header {
   width: 100%;
+  margin-left: 4px;
+  margin-top: 21px;
+  margin-bottom: 10px;
   order: 3;
 
   font-size: 18px;
@@ -78,10 +96,13 @@
 
   @media (min-width: $screen-sm) {
     width: 50%;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    margin-left: 0;
+
+    font-size: 20px;
   }
   @media (min-width: $screen-lg) {
-    font-size: 20px;
+    margin-top: 4px;
   }
 }
