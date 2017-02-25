@@ -81,8 +81,11 @@
 
   @media (min-width: $screen-sm) {
     &--signup {
+      position: relative;
       margin-right: 4px;
       margin-left: 0;
+
+      @mixin bottom-border #37b7ec;
     }
     &--login {
       position: absolute;
