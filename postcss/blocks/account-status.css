@@ -23,7 +23,8 @@
 
     &::before {
       position: absolute;
-      top: 0; left: 50%;
+      top: 0;
+      left: 50%;
       transform: translateX(-50%);
       z-index: -1;
 
@@ -44,7 +45,8 @@
 
 .account-status__logo {
   position: absolute;
-  top: 50%; left: $page-padding-xs;
+  top: 50%;
+  left: $page-padding-xs;
   transform: translateY(-60%) rotate(0.5deg);
 
   width: 104px;
@@ -53,6 +55,7 @@
   @media (min-width: $screen-sm) {
     left: $page-padding-sm;
   }
+
   @media (min-width: $screen-lg) {
     left: 0;
 
@@ -78,6 +81,7 @@
 
     color: #37b7ec;
   }
+
   &:hover {
     color: #00aeff;
   }
@@ -90,19 +94,23 @@
 
       @mixin bottom-border #37b7ec;
     }
+
     &--login {
       position: absolute;
-      top: 50%; right: $page-padding-sm;
+      top: 50%;
+      right: $page-padding-sm;
       transform: translateY(-50%);
 
       margin: 0;
     }
   }
+
   @media (min-width: 1000px) {
     &--login {
       right: 0;
     }
   }
+
   @media (min-width: $screen-lg) {
     margin-top: 23px;
     margin-bottom: 19px;
@@ -123,7 +131,6 @@
 
 .account-status__offer {
   display: none;
-
 
   @media (min-width: $screen-sm) {
     display: inline-block;

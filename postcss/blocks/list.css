@@ -7,8 +7,9 @@
 
   &--active .list__title::before {
     /* устанавливает иконку для активного списка */
-    background-image: url(../img/svg/list--active.svg);
+    background-image: url("../img/svg/list--active.svg");
   }
+
   &:last-of-type {
     margin-bottom: -6px;
   }
@@ -33,7 +34,8 @@
   background: #f7f8f8;
   cursor: pointer;
 
-  time, span {
+  time,
+  span {
     &:hover {
       opacity: 0.8;
     }
@@ -63,7 +65,7 @@
 
   display: inline-block;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 8px;
 
   font-size: 16px;
@@ -76,13 +78,14 @@
 
   &::before {
     position: absolute;
-    top: 2px; left: -27.5px;
+    top: 2px;
+    left: -27.5px;
 
     display: block;
     width: 16px;
     height: 14px;
 
-    background: url(../img/svg/list.svg) center no-repeat;
+    background: url("../img/svg/list.svg") center no-repeat;
     background-size: contain;
 
     content: "";
@@ -97,8 +100,8 @@
       left: -32px;
     }
   }
-
 }
+
 .list__time {
   display: inline-block;
   margin-right: auto;
@@ -116,8 +119,8 @@
 
     text-align: right;
   }
-
 }
+
 .list__length {
   display: inline-block;
 
@@ -128,5 +131,4 @@
   @media (min-width: $screen-sm) {
     width: 100px;
   }
-
 }

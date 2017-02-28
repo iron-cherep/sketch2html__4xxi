@@ -1,10 +1,13 @@
+/* переменные */
 @import "variables.css";
 
+/* общие стили */
 @import "normalize.css";
 @import "fonts.css";
 @import "mixins.css";
 @import "global.css";
 
+/* стили блоков */
 @import "blocks/button.css";
 @import "blocks/form.css";
 @import "blocks/list.css";
@@ -12,7 +15,6 @@
 @import "blocks/media.css";
 @import "blocks/attach.css";
 @import "blocks/social.css";
-
 @import "blocks/app-store.css";
 @import "blocks/account-status.css";
 @import "blocks/page-header.css";

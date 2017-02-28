@@ -15,6 +15,7 @@
     margin-left: auto;
   }
 }
+
 .social__item {
   display: none;
 
@@ -46,7 +47,8 @@
 
   svg {
     position: absolute;
-    top: 7px; left: 38px;
+    top: 7px;
+    left: 38px;
     display: inline-block;
     margin-right: 0.5em;
     fill: #37b7ec;

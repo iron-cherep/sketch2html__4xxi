@@ -60,7 +60,7 @@
   font-size: 11px;
   line-height: 12px;
 
-  &:first-letter {
+  &::first-letter {
     text-transform: uppercase;
   }
 
@@ -68,7 +68,7 @@
     font-size: 12px;
     line-height: 15px;
 
-    &:first-letter {
+    &::first-letter {
       text-transform: none;
     }
   }
@@ -83,10 +83,10 @@
 }
 
 .app-store__agent {
-
   &--apple {
     display: none;
   }
+
   &--android {
     display: inline;
   }
@@ -96,6 +96,7 @@
     &--apple {
       display: inline;
     }
+
     &--android {
       display: none;
     }
@@ -103,11 +104,11 @@
 }
 
 .app-store__button {
-
   &--download {
     margin-right: 3.625%;
     margin-left: auto;
   }
+
   &--close {
     padding: 5px;
     padding-right: 0;

@@ -26,7 +26,7 @@ $body-background:        #adc9d4;
 /*
   типографика
 */
-$font-helvetica:          "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-helvetica:          "Helvetica Neue", helvetica, arial, sans-serif;
 
 $font-size-base:          16px;
 $line-height-base:        1.35;

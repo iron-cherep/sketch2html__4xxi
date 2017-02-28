@@ -12,6 +12,7 @@
 
     text-align: center;
   }
+
   @media (min-width: 1000px) {
     width: 960px;
     margin-top: 91px;
@@ -21,9 +22,10 @@
 
     &::before {
       position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
+      top: 0;
+      left: 50%;
       z-index: -1;
+      transform: translateX(-50%);
 
       display: block;
       width: 100vw;
@@ -47,14 +49,17 @@
 
   @media (min-width: $screen-sm) {
     position: absolute;
-    top: 50%; left: $page-padding-sm;
+    top: 50%;
+    left: $page-padding-sm;
     transform: translateY(-50%);
 
     display: inline-block;
   }
+
   @media (min-width: 1000px) {
     left: 0;
   }
+
   @media (min-width: $screen-lg) {
     font-size: 12px;
   }
@@ -81,6 +86,7 @@
     position: relative;
     left: 7px;
   }
+
   @media (min-width: $screen-lg) {
     font-size: 12px;
 
@@ -96,14 +102,16 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: #979ea4;
   }
 }
 
 .page-footer__social {
   position: absolute;
-  right: $page-padding-xs; top: 50%;
+  top: 50%;
+  right: $page-padding-xs;
   transform: translateY(-50%);
 
   display: inline-block;
@@ -111,6 +119,7 @@
   @media (min-width: $screen-sm) {
     right: $page-padding-sm;
   }
+
   @media (min-width: 1000px) {
     right: 0;
   }
@@ -130,6 +139,7 @@
   @media (min-width: $screen-sm) {
     padding-right: 6px;
   }
+
   @media (min-width: $screen-lg) {
     svg {
       height: 18px;
