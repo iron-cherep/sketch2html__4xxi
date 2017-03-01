@@ -12,6 +12,7 @@
     padding-right: $page-padding-sm;
     padding-left: $page-padding-sm;
   }
+
   @media (min-width: 1000px) {
     width: 960px;
     margin-right: auto;
@@ -70,6 +71,10 @@
 
   cursor: pointer;
 
+  &:hover {
+    background-color: #00aeff;
+  }
+
   @media (min-width: $screen-sm) {
     margin-top: -4px;
     margin-right: 0;
@@ -77,6 +82,7 @@
     padding: 9px 17px;
     order: 4;
   }
+
   @media (min-width: $screen-lg) {
     margin-top: -12px;
   }
@@ -102,6 +108,7 @@
 
     font-size: 20px;
   }
+
   @media (min-width: $screen-lg) {
     margin-top: 4px;
   }

@@ -10,6 +10,7 @@
   &--starred {
     @mixin note-status starred;
   }
+
   &--protected {
     display: none;
 
@@ -19,10 +20,12 @@
       text-align: left;
       margin-top: 10px;
     }
+
     .note__time {
       float: none;
     }
   }
+
   &--archived {
     display: none;
 
@@ -34,6 +37,7 @@
       text-align: left;
       margin-top: 10px;
     }
+
     .note__time {
       float: none;
     }
@@ -56,15 +60,18 @@
       .note__footer {
         margin-top: 0;
         vertical-align: middle;
+
         @mixin note-status-message protected;
       }
     }
+
     &--archived {
       display: block;
 
       .note__footer {
         margin-top: 0;
         vertical-align: middle;
+
         @mixin note-status-message archived;
       }
     }
@@ -92,6 +99,7 @@
       margin-bottom: -10px;
     }
   }
+
   @media (min-width: $screen-lg) {
     margin-top: 16px;
     margin-bottom: -10px;
@@ -104,14 +112,14 @@
 }
 
 .note__time {
-  @mixin clearfix;
-
   display: inline-block;
   float: left;
   margin-top: 5px;
 
   line-height: normal;
   color: #aeb4ba;
+
+  @mixin clearfix;
 }
 
 .note__button {
@@ -133,12 +141,13 @@
   &--share {
     margin-right: 10px;
 
-    background: url(../img/svg/share.svg) center no-repeat;
+    background: url("../img/svg/share.svg") center no-repeat;
   }
+
   &--link {
     margin-right: -5px;
 
-    background: url(../img/svg/link.svg) center no-repeat;
+    background: url("../img/svg/link.svg") center no-repeat;
     background-size: 20px 20px;
 
     &:hover .note__share-link {
@@ -146,11 +155,12 @@
       transition: transform 0.4s ease-in-out;
     }
   }
+
   @media (min-width: $screen-sm) {
     bottom: 6px;
   }
-  @media (min-width: $screen-lg) {
 
+  @media (min-width: $screen-lg) {
     &--link:hover .note__share-link {
       transform: translateX(50%) scale(1);
       transition: transform 0.4s ease-in-out;
@@ -160,7 +170,8 @@
 
 .note__share-link {
   position: absolute;
-  top: -3.2em; right: 0;
+  top: -3.2em;
+  right: 0;
   z-index: 10;
 
   display: block;
@@ -175,8 +186,7 @@
   color: white;
 
   border-radius: 3px;
-  background: rgb(64,64,64);
-  background: rgba(64,64,64, 0.7);
+  background: rgba(64, 64, 64, 0.7);
 
   transform: scale(0);
   transform-origin: 100% 100%;
@@ -184,10 +194,11 @@
 
   &::after {
     position: absolute;
-    bottom: -14px; right: 10px;
+    bottom: -14px;
+    right: 10px;
 
     border: 7px solid transparent;
-    border-top-color: rgba(64,64,64, 0.7);
+    border-top-color: rgba(64, 64, 64, 0.7);
 
     content: "";
   }
@@ -217,13 +228,14 @@
 
   &::before {
     position: absolute;
-    top: -3px; left: 0;
+    top: -3px;
+    left: 0;
 
     display: block;
     width: 20px;
     height: 22px;
 
-    background: url(../img/svg/calendar.svg) center no-repeat;
+    background: url("../img/svg/calendar.svg") center no-repeat;
     background-size: contain;
 
     content: "";
@@ -259,6 +271,7 @@
 
     transform: none;
   }
+
   @media (min-width: $screen-lg) {
     margin-top: -1px;
     margin-bottom: 16px;

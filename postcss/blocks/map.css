@@ -9,16 +9,18 @@
     margin-top: 24px;
     padding-bottom: 17px;
   }
+
   @media (min-width: $screen-lg) {
     padding-bottom: 19px;
   }
 }
+
 .map__container {
   display: inline-block;
   width: 100%;
   height: 55vw;
 
-  background: url(../img/map@3x.png) center no-repeat;
+  background: url("../img/map@3x.png") center no-repeat;
   background-size: cover;
 
   @media (min-width: $screen-sm) {
@@ -37,6 +39,7 @@
   @media (min-width: $screen-sm) {
     width: 300px;
   }
+
   @media (min-width: $screen-lg) {
     margin-top: 1px;
     width: 500px;
@@ -55,10 +58,12 @@
   @media (min-width: $screen-sm) {
     margin-top: 0;
   }
+
   @media (min-width: $screen-sm) {
     margin-bottom: 4px;
   }
 }
+
 .map__address {
   display: inline-block;
   width: 100%;
@@ -66,6 +71,7 @@
   line-height: 21px;
   color: #858585;
 }
+
 .map__state {
   display: inline-block;
   width: 100%;
@@ -75,11 +81,13 @@
   line-height: 21px;
   color: #858585;
 }
+
 .map__link {
   line-height: 21px;
   color: #00adff;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: #00adff;
   }
 }
