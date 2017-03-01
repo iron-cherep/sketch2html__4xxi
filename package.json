@@ -31,13 +31,14 @@
     "stylelint": "^7.8.0"
   },
   "scripts": {
-    "eslint": "eslint *.js",
+    "eslint": "eslint js/**/*.js",
     "stylelint": "stylelint postcss/**/*.css",
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
   "pre-commit": [
-    "stylelint"
+    "stylelint",
+    "eslint"
   ],
   "editorconfig-cli": [
     "*.html",
