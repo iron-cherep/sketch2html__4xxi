@@ -1,0 +1,13 @@
+.page-main {
+  padding-right: $page-padding-xs;
+  padding-left: $page-padding-xs;
+
+  @media (min-width: $screen-sm) {
+    padding-right: $page-padding-sm;
+    padding-left: $page-padding-sm;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 0;
+  }
+}

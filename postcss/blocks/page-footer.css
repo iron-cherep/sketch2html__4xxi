@@ -1,0 +1,153 @@
+.page-footer {
+  position: relative;
+
+  margin-top: 50px;
+  padding-right: 3.75%;
+  padding-left: 3.75%;
+
+  background-color: #3c434a;
+
+  @media (min-width: $screen-sm) {
+    margin-top: 55px;
+
+    text-align: center;
+  }
+
+  @media (min-width: 1000px) {
+    width: 960px;
+    margin-top: 91px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+
+      display: block;
+      width: 100vw;
+      height: 100%;
+
+      background-color: #3c434a;
+
+      content: "";
+    }
+  }
+}
+
+.page-footer__copyright {
+  display: none;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #979ea4;
+
+  @media (min-width: $screen-sm) {
+    position: absolute;
+    top: 50%;
+    left: $page-padding-sm;
+    transform: translateY(-50%);
+
+    display: inline-block;
+  }
+
+  @media (min-width: 1000px) {
+    left: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 12px;
+  }
+}
+
+.page-footer__links {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #979ea4;
+
+  &-item {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 14px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $screen-sm) {
+    position: relative;
+    left: 7px;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: 12px;
+
+    &-item {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.page-footer__link {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &:link,
+  &:visited {
+    color: #979ea4;
+  }
+}
+
+.page-footer__social {
+  position: absolute;
+  top: 50%;
+  right: $page-padding-xs;
+  transform: translateY(-50%);
+
+  display: inline-block;
+
+  @media (min-width: $screen-sm) {
+    right: $page-padding-sm;
+  }
+
+  @media (min-width: 1000px) {
+    right: 0;
+  }
+}
+
+.page-footer__social-link {
+  position: relative;
+
+  display: inline-block;
+  margin-right: -5px;
+  padding: 10px;
+
+  svg {
+    fill: #8c9399;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding-right: 6px;
+  }
+
+  @media (min-width: $screen-lg) {
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    &--twitter {
+      top: 1px;
+    }
+  }
+}

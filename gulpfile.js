@@ -9,6 +9,9 @@ var del = require("del");
 var sourcemaps = require("gulp-sourcemaps");
 var imagemin = require("gulp-imagemin");
 
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
+
 var postcss = require("gulp-postcss");
 var cssnext = require("postcss-cssnext");
 var precss = require("precss");
@@ -73,6 +76,24 @@ gulp.task("images", function() {
 });
 
 ////
+//Оптимизирует SVG-изображения и создаёт спрайт. Не заменяет оригинальных файлов.
+////
+gulp.task("svgmin", function() {
+  return gulp.src([
+    "img/**/*.svg"
+  ], {
+    base: "."
+  })
+    .pipe(svgmin())
+    .pipe(gulp.dest("build"))
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/svg"));
+});
+
+////
 //Активирует browser-sync с заданными параметрами.
 ////
 gulp.task("serve", function() {
@@ -105,9 +126,8 @@ gulp.watch("build/js/*.js").on("change", server.reload); //следит за js-
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
-    "img/**",
+    "img/**/*.{png,jpg,gif}",
     "js/**",
-    "icons/*", "*.ico", "*.png", "*.xml",
     "*.html"
   ], {
     base: "."
@@ -129,6 +149,7 @@ gulp.task("build", function (fn) {
   run(
     "clean",
     "copy",
+    "svgmin",
     "style",
     fn
   );

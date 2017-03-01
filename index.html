@@ -17,68 +17,303 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+
+    <aside class="app-store">
+      <img class="app-store__logo" src="img/app-icon@3x.png" alt="app-logo">
+      <div class="app-store__info">
+        <p class="app-store__header">Centrallo</p>
+        <p class="app-store__description">
+          <span class="app-store__addition">Download it for </span>free on the
+          <span class="app-store__agent  app-store__agent--android">Google Play</span>
+          <span class="app-store__agent  app-store__agent--apple">App Store</span>
+        </p>
+      </div>
+      <button class="button  app-store__button  app-store__button--download">Download</button>
+      <button class="app-store__button  app-store__button--close" id="close-app-popup">
+        <svg role="img" title="close" width="13" height="12">
+          <use xlink:href="img/svg/sprite.svg#close"/>
+        </svg>
+     </button>
+    </aside>
+
+    <aside class="account-status">
+      <h1 class="account-status__main-header">
+        <img src="img/logo@3x.png" class="account-status__logo">
+        Centrallo
+      </h1>
+      <a href="#" class="account-status__link  account-status__link--signup">Sign up
+        <span class="account-status__addition">for free</span>
+      </a>
+      <span class="account-status__offer"> — Start publishing in minutes</span>
+      <a href="#" class="account-status__link  account-status__link--login">Log in</a>
+    </aside>
+
+    <header class="page-header">
+
+      <h3 class="page-header__user">
+        <img src="img/ava@3x.png" alt="avatar" class="page-header__avatar">
+        <span class="page-header__user-name">Konstantin Vladimirskiy</span>
+      </h3>
+
+      <ul class="social">
+        <li class="social__item  social__item--toggle">
+          <button class="button  social__toggle">
+            <svg role="img" title="Share" width="16" height="16">
+              <use xlink:href="img/svg/sprite.svg#share"/>
+            </svg>
+            Share
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+        </li>
+        <li class="social__item">
+          <button class="social__button">
+            <svg role="img" title="Facebook" width="8" height="16">
+              <use xlink:href="img/svg/sprite.svg#soc-fb"/>
+            </svg>
+          </button>
+        </li>
+        <li class="social__item">
+          <button class="social__button">
+            <svg role="img" title="Twitter" width="16" height="13">
+              <use xlink:href="img/svg/sprite.svg#soc-tw"/>
+            </svg>
+          </button>
+        </li>
+        <li class="social__item">
+          <button class="social__button">
+            <svg role="img" title="VK" width="20" height="11">
+              <use xlink:href="img/svg/sprite.svg#soc-vk"/>
+            </svg>
+          </button>
+        </li>
+        <li class="social__item">
+          <button class="social__button">
+            <svg role="img" title="LinkedIn" width="15" height="15">
+              <use xlink:href="img/svg/sprite.svg#soc-in"/>
+            </svg>
+          </button>
+        </li>
+        <li class="social__item">
+          <span class="social__link">http://cll.io/a6lnu</span>
+        </li>
+      </ul>
+
+      <button class="button  page-header__button  page-header__button--add">Add to my Centrallo</button>
+      <h2 class="page-header__post-header">Post-release checklist 2015.02.26</h2>
+
+    </header>
+    <main class="page-main">
+
+      <article class="note  note--starred">
+        <form class="form">
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
+            Referral Accepted and Invited invitations not sorted by A-Z
+          </label>
+
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
+            Inbox shows me 242 items - that includes Done items; Only show me active
+          </label>
+
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
+            Inbox defaults to show done items - it should not
+          </label>
+
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
+            Lists default to Show Done - they should not
+          </label>
+
+          <label class="form__checkbox-label">
+            <input type="checkbox" class="form__checkbox"><span class="form__custom-checkbox"></span>
+            Recent view should sort by Created and show no Done items
+          </label>
+        </form>
+        <footer class="note__footer">
+          <time class="note__time">2h ago</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link
+            <span class="note__share-link">http://cll.io/a6lnu</span>
+          </button>
+        </footer>
+      </article>
+
+      <article class="note">
+        <div class="list  list--active">
+          <p class="list__info">
+            <span class="list__title">Children</span>
+            <time class="list__time">7h ago</time>
+            <span class="list__length">12 items</span>
+          </p>
+          <ul class="list__items">
+            <li class="list__item">Lorem ipsum.</li>
+            <li class="list__item">Lorem ipsum.</li>
+            <li class="list__item">Lorem ipsum.</li>
+            <li class="list__item">Lorem ipsum.</li>
+          </ul>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="list">
+          <p class="list__info">
+            <span class="list__title">The longest title in the world</span>
+            <time class="list__time">Mar 13</time>
+            <span class="list__length">3 items</span>
+          </p>
+          <ul class="list__items">
+            <li class="list__item">Lorem ipsum.</li>
+            <li class="list__item">Lorem ipsum.</li>
+            <li class="list__item">Lorem ipsum.</li>
+          </ul>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <footer class="note__footer">
+          <time class="note__time">2h ago</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link
+            <span class="note__share-link">http://cll.io/a6lnu</span>
+          </button>
+        </footer>
+      </article>
+
+      <article class="note">
+        <div class="media">
+          <div class="media__video-container">
+            <img src="img/video@3x.png" alt="video" class="media__video-preview">
+            <video class="media__video"></video>
+            <button class="media__play-button"></button>
+          </div>
+          <img src="img/photo-1@3x.png" alt="photo" class="media__photo">
+          <img src="img/photo-2@3x.png" alt="photo" class="media__photo">
         </div>
+        <time class="note__due-on">Due on Feb 13, 12:42 PM</time>
+        <footer class="note__footer">
+          <time class="note__time">Feb 14</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link
+            <span class="note__share-link">http://cll.io/a6lnu</span>
+          </button>
+        </footer>
+      </article>
+
+      <article class="note">
+        <p class="note__text">The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.</p>
+        <div class="media  media--before-map">
+          <img src="img/photo-3@3x.png" alt="photo" class="media__photo  media__photo--small">
+          <img src="img/photo-4@3x.png" alt="photo" class="media__photo  media__photo--small">
+          <img src="img/photo-5@3x.png" alt="photo" class="media__photo">
+          <img src="img/photo-6@3x.png" alt="photo" class="media__photo">
+        </div>
+        <div class="map">
+          <div class="map__container" id="g-map"></div>
+          <div class="map__info">
+            <h3 class="map__header">Merry Bergtraum High School for Business Cariers</h3>
+            <p class="map__address">411 Pearl St, NY 10038
+              <span class="map__state">United States of America</span>
+              <a href="#" class="map__link">Watch location on Google Maps</a>
+            </p>
+          </div>
+        </div>
+        <ul class="attach">
+          <li class="attach__item">
+            <svg role="img" class="attach__icon" title="dropbox">
+              <use xlink:href="img/svg/sprite.svg#attach-db"/>
+            </svg>
+            <span class="attach__filename">logo_final.eps</span>
+          </li>
+          <li class="attach__item">
+            <svg role="img" class="attach__icon" title="skydrive">
+              <use xlink:href="img/svg/sprite.svg#attach-skydrive"/>
+            </svg>
+            <span class="attach__filename">photos_summer.zip</span>
+          </li>
+          <li class="attach__item">
+            <svg role="img" class="attach__icon" title="google-doc">
+              <use xlink:href="img/svg/sprite.svg#attach-doc"/>
+            </svg>
+            <span class="attach__filename">work_…hard.doc</span>
+          </li>
+        </ul>
+        <footer class="note__footer  note__footer--narrow">
+          <time class="note__time">Jan 12</time>
+          <button class="note__button  note__button--share">share</button>
+          <button class="note__button  note__button--link">link
+            <span class="note__share-link">http://cll.io/a6lnu</span>
+          </button>
+        </footer>
+      </article>
+
+      <article class="note  note--protected">
+        <footer class="note__footer">
+          <time class="note__time">Nov 22</time>
+        </footer>
+      </article>
+
+      <article class="note  note--archived">
+        <footer class="note__footer">
+          <time class="note__time">Nov 21</time>
+        </footer>
+      </article>
+
+    </main>
+    <footer class="page-footer">
+      <span class="page-footer__copyright">© CENTRALLO 2015</span>
+      <ul class="page-footer__links">
+        <li class="page-footer__links-item"><a href="#" class="page-footer__link">PRIVACY</a></li>
+        <li class="page-footer__links-item"><a href="#" class="page-footer__link">TERMS</a></li>
+        <li class="page-footer__links-item"><a href="#" class="page-footer__link">CONTACT</a></li>
+      </ul>
+      <div class="page-footer__social">
+        <a href="#" class="page-footer__social-link  page-footer__social-link--twitter">
+          <svg role="img" title="Twitter" width="16" height="13">
+            <use xlink:href="img/svg/sprite.svg#soc-tw"/>
+          </svg>
+        </a>
+        <a href="#" class="page-footer__social-link">
+          <svg role="img" title="Facebook" width="8" height="16">
+            <use xlink:href="img/svg/sprite.svg#soc-fb"/>
+          </svg>
+        </a>
       </div>
+    </footer>
 
-      <hr>
+    <aside class="popup  popup--hidden  popup--social" id="social-popup__window">
+      <div class="popup__screen-filter"></div>
+      <div class="popup__modal-wrapper">
+        <h2 class="popup__header">Share</h2>
+        <span class="popup__link">http://cll.io/a6lnu</span>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
+        <button class="popup__button  popup__button--facebook">
+          <svg role="img" title="Facebook" width="8" height="16">
+            <use xlink:href="img/svg/sprite.svg#soc-fb"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--twitter">
+          <svg role="img" title="Twitter" width="16" height="13">
+            <use xlink:href="img/svg/sprite.svg#soc-tw"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--vk">
+          <svg role="img" title="VK" width="20" height="11">
+            <use xlink:href="img/svg/sprite.svg#soc-vk"/>
+          </svg>
+        </button>
+        <button class="popup__button  popup__button--linkedin">
+          <svg role="img" title="LinkedIn" width="15" height="15">
+            <use xlink:href="img/svg/sprite.svg#soc-in"/>
+          </svg>
+        </button>
 
-        <script src="js/main.js"></script>
+        <button class="popup__close" id="social-popup__close">
+          <svg role="img" title="close" width="13" height="12">
+            <use xlink:href="img/svg/sprite.svg#close"/>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+      <script src="js/vendor/svg4everybody.min.js"></script>
+      <script>svg4everybody();</script>
+      <script src="js/vendor/jquery-3.1.1.min.js"></script>
+      <script src="js/main.js"></script>
 
     </body>
 </html>

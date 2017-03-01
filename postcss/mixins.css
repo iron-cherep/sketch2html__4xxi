@@ -1,0 +1,137 @@
+/* служебные */
+
+@define-mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@define-mixin visuallyhidden {
+  border: 0;
+  clip-path: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+  нижний разделитель 0.5px
+*/
+@define-mixin bottom-border $color {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0.5);
+
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $color;
+
+    content: "";
+  }
+}
+
+@define-mixin media-bottom-border $color {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: scaleY(0.5) translateX(-50%);
+
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% - $media-padding-xs * 2);
+
+    border-bottom: 1px solid $color;
+
+    content: "";
+
+    @media (min-width: $screen-sm) {
+      width: calc(100% - $media-padding-sm * 2);
+    }
+  }
+}
+
+/*
+  добавляет отметку в правом верхнем
+  углу записи в соответствии с её состоянием
+*/
+@define-mixin note-status $state {
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    border-top-right-radius: 5px;
+    content: "";
+
+    @if $(state) == starred {
+      background-image:
+      url("../img/svg/star.svg"),
+      linear-gradient(45deg, transparent 0%, transparent 54%, #ef4b2b 54%, #ef4b2b 100%);
+      background-repeat: no-repeat;
+      background-position: 85% 12%;
+      background-size: 16px 15.2px, 100% 100%;
+    }
+
+    @if $(state) == archived {
+      background-image:
+      url("../img/svg/box.svg"),
+      linear-gradient(45deg, transparent 0%, transparent 51%, #979da3 51%, #979da3 100%);
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      background-size: 16px 14px, 100% 100%;
+    }
+
+    @if $(state) == protected {
+      background-image:
+      url("../img/lock.png"),
+      linear-gradient(45deg, transparent 0%, transparent 51%, #3c434a 51%, #3c434a 100%);
+      background-repeat: no-repeat;
+      background-position: 80% 20%;
+      background-size: 12px 15px, 100% 100%;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 44px;
+      height: 44px;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+@define-mixin note-status-message $state {
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+
+    display: inline-block;
+
+    @if $(state) == archived {
+      color: #858585;
+      content: "Archived";
+    }
+
+    @if $(state) == protected {
+      color: #009ce6;
+      content: "Protected";
+    }
+
+  }
+}

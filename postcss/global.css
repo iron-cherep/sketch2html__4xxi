@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+
+  font-family: $font-helvetica;
+
+  transition:
+  0.4s color ease-in-out,
+  background-color 0.4s ease-in-out,
+  opacity 0.2s ease-in-out;
+}
+
+*:link,
+*:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: $font-size-base;
+  line-height: 1.35;
+}
+
+body {
+  background-color: $body-background;
+  background-image: url(../img/pat.png);
+  background-repeat: repeat;
+  background-position: 0 50px;
+
+  @media (min-width: $screen-lg) {
+    background-position: 0 0;
+  }
+}

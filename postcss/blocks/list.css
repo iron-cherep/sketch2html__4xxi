@@ -1,0 +1,134 @@
+.list {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 11px;
+  padding-left: 28px;
+
+  &--active .list__title::before {
+    /* устанавливает иконку для активного списка */
+    background-image: url("../img/svg/list--active.svg");
+  }
+
+  &:last-of-type {
+    margin-bottom: -6px;
+  }
+
+  @media (min-width: $screen-sm) {
+    &:not(:last-of-type) {
+      @mixin bottom-border #bdbdbd;
+    }
+  }
+}
+
+.list__info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+
+  margin-bottom: 5px;
+
+  font-size: 0;
+
+  background: #f7f8f8;
+  cursor: pointer;
+
+  time,
+  span {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 0;
+    margin-left: 4px;
+    padding-top: 1px;
+    padding-bottom: 14px;
+  }
+}
+
+.list__items {
+  margin: 0;
+  padding-left: 0;
+}
+
+.list__item {
+  margin-bottom: 5px;
+
+  color: #494949;
+}
+
+.list__title {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+
+  &--top {
+    margin-top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: -27.5px;
+
+    display: block;
+    width: 16px;
+    height: 14px;
+
+    background: url("../img/svg/list.svg") center no-repeat;
+    background-size: contain;
+
+    content: "";
+  }
+
+  @media (min-width: $screen-sm) {
+    width: auto;
+    margin: 0;
+    margin-right: auto;
+
+    &::before {
+      left: -32px;
+    }
+  }
+}
+
+.list__time {
+  display: inline-block;
+  margin-right: auto;
+
+  text-align: left;
+  font-size: 16px;
+  line-height: 18px;
+  color: #858585;
+
+  @media (min-width: $screen-sm) {
+    width: 100px;
+    margin-right: 0;
+    padding-left: 15px;
+    order: 10;
+
+    text-align: right;
+  }
+}
+
+.list__length {
+  display: inline-block;
+
+  text-align: right;
+  font-size: 16px;
+  color: #858585;
+
+  @media (min-width: $screen-sm) {
+    width: 100px;
+  }
+}

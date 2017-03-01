@@ -1,0 +1,133 @@
+.media {
+  position: relative;
+
+  margin-right: -$media-padding-xs;
+  margin-left: -$media-padding-xs;
+  padding-bottom: 18px;
+
+  font-size: 0;
+
+  @mixin media-bottom-border #bdbdbd;
+
+  @media (min-width: $screen-sm) {
+    margin-right: -$media-padding-sm;
+    margin-left: -$media-padding-sm;
+
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 20px;
+
+    &--before-map {
+      padding-bottom: 13px;
+    }
+  }
+}
+
+.media .media__video-container,
+.media .media__photo {
+  /* задаёт отступ между идущими в ряд элементами */
+
+  padding-right: $media-padding-xs;
+  padding-left: $media-padding-xs;
+
+  @media (min-width: $screen-sm) {
+    padding-right: $media-padding-sm;
+    padding-left: $media-padding-sm;
+  }
+}
+
+.media__video-container {
+  position: relative;
+
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 6px;
+
+  font-size: 0;
+
+  @media (min-width: $screen-sm) {
+    height: 120px;
+    width: auto;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 140px;
+  }
+}
+
+.media__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $screen-sm) {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.media__video-preview {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 380px) {
+    margin-bottom: 12px;
+    height: 120px;
+    width: auto;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 140px;
+  }
+}
+
+.media__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 64px;
+  height: 64px;
+
+  background: url("../img/play.png") center no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (min-width: $screen-sm) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.media__photo {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 6px;
+
+  &--small {
+    height: 120px;
+  }
+
+  @media (min-width: 380px) {
+    height: 120px;
+    width: auto;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 140px;
+  }
+}

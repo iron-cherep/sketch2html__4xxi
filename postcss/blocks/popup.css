@@ -1,0 +1,137 @@
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.popup__screen-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 90;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.5;
+  background: black;
+}
+
+.popup__modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+
+  border-radius: 3px;
+  background-color: #f0f5fa;
+
+  font-size: 0;
+  text-align: center;
+}
+
+.popup__header {
+  position: relative;
+
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 14px;
+
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: #404143;
+
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  background-color: white;
+}
+
+.popup__link {
+  display: block;
+  margin: 0 64.5px;
+  padding-top: 21px;
+  padding-bottom: 38px;
+
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.popup__button {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+
+  svg {
+    fill: white;
+  }
+
+  &--facebook {
+    padding-bottom: 2px;
+
+    background-color: #3a589c;
+
+    svg {
+      width: 9px;
+      height: 19px;
+    }
+  }
+
+  &--twitter {
+    background-color: #29a9e1;
+  }
+
+  &--vk {
+    padding-right: 6px;
+
+    background-color: #5a7ba0;
+  }
+
+  &--linkedin {
+    padding-left: 8px;
+    padding-bottom: 5px;
+
+    background-color: #007bb8;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+
+  padding: 5px;
+
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  svg {
+    stroke: #757e87;
+    stroke-width: 2px;
+  }
+}
